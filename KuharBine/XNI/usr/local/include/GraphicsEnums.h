@@ -121,6 +121,7 @@ typedef enum {
     PrimitiveTypeLineStrip = GL_LINE_STRIP,
     PrimitiveTypeTriangleList = GL_TRIANGLES,
     PrimitiveTypeTriangleStrip = GL_TRIANGLE_STRIP,
+    PrimitiveTypeTriangleFan = GL_TRIANGLE_FAN,
 } PrimitiveType;
 
 typedef enum {
@@ -186,7 +187,11 @@ typedef enum {
     //SurfaceFormatHalfSingle,
     //SurfaceFormatHalfVector2,
     //SurfaceFormatHalfVector4,
-    //SurfaceFormatHdrBlendable	
+    //SurfaceFormatHdrBlendable
+    SurfaceFormatPvrtc4b,
+    SurfaceFormatPvrtc2b,
+    SurfaceFormatPvrtc4bAlpha,
+    SurfaceFormatPvrtc2bAlpha
 } SurfaceFormat;
 
 typedef enum {

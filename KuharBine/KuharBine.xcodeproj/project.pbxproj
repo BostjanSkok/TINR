@@ -24,6 +24,34 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		3037EB2B1A7BAE6C00CDD19B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = Express;
+		};
+		3037EB2D1A7BAE6C00CDD19B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B54278A0127705FF0015E810;
+			remoteInfo = "Express Release";
+		};
+		3037EB341A7BAE7300CDD19B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = "Artificial I";
+		};
+		3037EB361A7BAE7300CDD19B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5742CCB1276E20D00993B4F;
+			remoteInfo = "Artificial I Release";
+		};
 		306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 306DE71B1A7B31CF003AA55C /* Project object */;
@@ -55,6 +83,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Express.xcodeproj; path = ../Express/Express.xcodeproj; sourceTree = "<group>"; };
+		3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = "<group>"; };
 		306DE7231A7B31CF003AA55C /* KuharBine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuharBine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306DE7271A7B31CF003AA55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306DE7281A7B31CF003AA55C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -105,9 +135,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3037EB261A7BAE6C00CDD19B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3037EB2C1A7BAE6C00CDD19B /* libExpress.a */,
+				3037EB2E1A7BAE6C00CDD19B /* libExpress.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3037EB301A7BAE7300CDD19B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3037EB351A7BAE7300CDD19B /* libArtificial.a */,
+				3037EB371A7BAE7300CDD19B /* libArtificial.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		306DE71A1A7B31CF003AA55C = {
 			isa = PBXGroup;
 			children = (
+				3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */,
+				3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */,
 				306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */,
 				306DE7601A7B3526003AA55C /* Frameworks */,
 				306DE7251A7B31CF003AA55C /* KuharBine */,
@@ -273,6 +323,14 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
+					ProductGroup = 3037EB301A7BAE7300CDD19B /* Products */;
+					ProjectRef = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
+				},
+				{
+					ProductGroup = 3037EB261A7BAE6C00CDD19B /* Products */;
+					ProjectRef = 3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */;
+				},
+				{
 					ProductGroup = 306DE78A1A7B767A003AA55C /* Products */;
 					ProjectRef = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
 				},
@@ -286,6 +344,34 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		3037EB2C1A7BAE6C00CDD19B /* libExpress.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpress.a;
+			remoteRef = 3037EB2B1A7BAE6C00CDD19B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3037EB2E1A7BAE6C00CDD19B /* libExpress.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libExpress.a;
+			remoteRef = 3037EB2D1A7BAE6C00CDD19B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3037EB351A7BAE7300CDD19B /* libArtificial.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libArtificial.a;
+			remoteRef = 3037EB341A7BAE7300CDD19B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3037EB371A7BAE7300CDD19B /* libArtificial.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libArtificial.a;
+			remoteRef = 3037EB361A7BAE7300CDD19B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		306DE78F1A7B767A003AA55C /* libKitchenEngine.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -522,6 +608,7 @@
 				306DE7481A7B31CF003AA55C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		306DE7491A7B31CF003AA55C /* Build configuration list for PBXNativeTarget "KuharBineTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +617,7 @@
 				306DE74B1A7B31CF003AA55C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
