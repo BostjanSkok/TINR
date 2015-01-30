@@ -1,0 +1,474 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		306DE7291A7B31CF003AA55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7281A7B31CF003AA55C /* main.m */; };
+		306DE7431A7B31CF003AA55C /* KuharBineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7421A7B31CF003AA55C /* KuharBineTests.m */; };
+		306DE74D1A7B3420003AA55C /* libXNI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE74C1A7B3420003AA55C /* libXNI.a */; };
+		306DE7541A7B34B3003AA55C /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE74E1A7B34B3003AA55C /* AudioToolbox.framework */; };
+		306DE7551A7B34B3003AA55C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE74F1A7B34B3003AA55C /* AVFoundation.framework */; };
+		306DE7561A7B34B3003AA55C /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE7501A7B34B3003AA55C /* GameKit.framework */; };
+		306DE7571A7B34B3003AA55C /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE7511A7B34B3003AA55C /* OpenAL.framework */; };
+		306DE7581A7B34B4003AA55C /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE7521A7B34B3003AA55C /* OpenGLES.framework */; };
+		306DE7591A7B34B4003AA55C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE7531A7B34B3003AA55C /* QuartzCore.framework */; };
+		306DE75B1A7B34CF003AA55C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75A1A7B34CF003AA55C /* Foundation.framework */; };
+		306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75C1A7B34F1003AA55C /* CoreGraphics.framework */; };
+		306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75E1A7B3503003AA55C /* UIKit.framework */; };
+		306DE7651A7B3681003AA55C /* KuharBine.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7641A7B3681003AA55C /* KuharBine.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306DE71B1A7B31CF003AA55C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 306DE7221A7B31CF003AA55C;
+			remoteInfo = KuharBine;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		306DE7231A7B31CF003AA55C /* KuharBine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuharBine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		306DE7271A7B31CF003AA55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306DE7281A7B31CF003AA55C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		306DE73C1A7B31CF003AA55C /* KuharBineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KuharBineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		306DE7411A7B31CF003AA55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		306DE7421A7B31CF003AA55C /* KuharBineTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KuharBineTests.m; sourceTree = "<group>"; };
+		306DE74C1A7B3420003AA55C /* libXNI.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libXNI.a; path = XNI/libXNI.a; sourceTree = "<group>"; };
+		306DE74E1A7B34B3003AA55C /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		306DE74F1A7B34B3003AA55C /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		306DE7501A7B34B3003AA55C /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		306DE7511A7B34B3003AA55C /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
+		306DE7521A7B34B3003AA55C /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		306DE7531A7B34B3003AA55C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		306DE75A1A7B34CF003AA55C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		306DE75C1A7B34F1003AA55C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		306DE75E1A7B3503003AA55C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		306DE7631A7B3681003AA55C /* KuharBine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuharBine.h; sourceTree = "<group>"; };
+		306DE7641A7B3681003AA55C /* KuharBine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuharBine.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		306DE7201A7B31CF003AA55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */,
+				306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */,
+				306DE75B1A7B34CF003AA55C /* Foundation.framework in Frameworks */,
+				306DE7541A7B34B3003AA55C /* AudioToolbox.framework in Frameworks */,
+				306DE7551A7B34B3003AA55C /* AVFoundation.framework in Frameworks */,
+				306DE7561A7B34B3003AA55C /* GameKit.framework in Frameworks */,
+				306DE7571A7B34B3003AA55C /* OpenAL.framework in Frameworks */,
+				306DE7581A7B34B4003AA55C /* OpenGLES.framework in Frameworks */,
+				306DE7591A7B34B4003AA55C /* QuartzCore.framework in Frameworks */,
+				306DE74D1A7B3420003AA55C /* libXNI.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		306DE7391A7B31CF003AA55C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		306DE71A1A7B31CF003AA55C = {
+			isa = PBXGroup;
+			children = (
+				306DE7601A7B3526003AA55C /* Frameworks */,
+				306DE7251A7B31CF003AA55C /* KuharBine */,
+				306DE73F1A7B31CF003AA55C /* KuharBineTests */,
+				306DE7241A7B31CF003AA55C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		306DE7241A7B31CF003AA55C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7231A7B31CF003AA55C /* KuharBine.app */,
+				306DE73C1A7B31CF003AA55C /* KuharBineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		306DE7251A7B31CF003AA55C /* KuharBine */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7621A7B3574003AA55C /* Assets */,
+				306DE7611A7B3563003AA55C /* Classes */,
+				306DE7261A7B31CF003AA55C /* Supporting Files */,
+			);
+			path = KuharBine;
+			sourceTree = "<group>";
+		};
+		306DE7261A7B31CF003AA55C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7271A7B31CF003AA55C /* Info.plist */,
+				306DE7281A7B31CF003AA55C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		306DE73F1A7B31CF003AA55C /* KuharBineTests */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7421A7B31CF003AA55C /* KuharBineTests.m */,
+				306DE7401A7B31CF003AA55C /* Supporting Files */,
+			);
+			path = KuharBineTests;
+			sourceTree = "<group>";
+		};
+		306DE7401A7B31CF003AA55C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7411A7B31CF003AA55C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		306DE7601A7B3526003AA55C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				306DE75E1A7B3503003AA55C /* UIKit.framework */,
+				306DE75C1A7B34F1003AA55C /* CoreGraphics.framework */,
+				306DE75A1A7B34CF003AA55C /* Foundation.framework */,
+				306DE74E1A7B34B3003AA55C /* AudioToolbox.framework */,
+				306DE74F1A7B34B3003AA55C /* AVFoundation.framework */,
+				306DE7501A7B34B3003AA55C /* GameKit.framework */,
+				306DE7511A7B34B3003AA55C /* OpenAL.framework */,
+				306DE7521A7B34B3003AA55C /* OpenGLES.framework */,
+				306DE7531A7B34B3003AA55C /* QuartzCore.framework */,
+				306DE74C1A7B3420003AA55C /* libXNI.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		306DE7611A7B3563003AA55C /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7631A7B3681003AA55C /* KuharBine.h */,
+				306DE7641A7B3681003AA55C /* KuharBine.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		306DE7621A7B3574003AA55C /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Assets;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		306DE7221A7B31CF003AA55C /* KuharBine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 306DE7461A7B31CF003AA55C /* Build configuration list for PBXNativeTarget "KuharBine" */;
+			buildPhases = (
+				306DE71F1A7B31CF003AA55C /* Sources */,
+				306DE7201A7B31CF003AA55C /* Frameworks */,
+				306DE7211A7B31CF003AA55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KuharBine;
+			productName = KuharBine;
+			productReference = 306DE7231A7B31CF003AA55C /* KuharBine.app */;
+			productType = "com.apple.product-type.application";
+		};
+		306DE73B1A7B31CF003AA55C /* KuharBineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 306DE7491A7B31CF003AA55C /* Build configuration list for PBXNativeTarget "KuharBineTests" */;
+			buildPhases = (
+				306DE7381A7B31CF003AA55C /* Sources */,
+				306DE7391A7B31CF003AA55C /* Frameworks */,
+				306DE73A1A7B31CF003AA55C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				306DE73E1A7B31CF003AA55C /* PBXTargetDependency */,
+			);
+			name = KuharBineTests;
+			productName = KuharBineTests;
+			productReference = 306DE73C1A7B31CF003AA55C /* KuharBineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		306DE71B1A7B31CF003AA55C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = fri;
+				TargetAttributes = {
+					306DE7221A7B31CF003AA55C = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					306DE73B1A7B31CF003AA55C = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = 306DE7221A7B31CF003AA55C;
+					};
+				};
+			};
+			buildConfigurationList = 306DE71E1A7B31CF003AA55C /* Build configuration list for PBXProject "KuharBine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 306DE71A1A7B31CF003AA55C;
+			productRefGroup = 306DE7241A7B31CF003AA55C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				306DE7221A7B31CF003AA55C /* KuharBine */,
+				306DE73B1A7B31CF003AA55C /* KuharBineTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		306DE7211A7B31CF003AA55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		306DE73A1A7B31CF003AA55C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		306DE71F1A7B31CF003AA55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306DE7291A7B31CF003AA55C /* main.m in Sources */,
+				306DE7651A7B3681003AA55C /* KuharBine.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		306DE7381A7B31CF003AA55C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				306DE7431A7B31CF003AA55C /* KuharBineTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		306DE73E1A7B31CF003AA55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 306DE7221A7B31CF003AA55C /* KuharBine */;
+			targetProxy = 306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		306DE7441A7B31CF003AA55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		306DE7451A7B31CF003AA55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		306DE7471A7B31CF003AA55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KuharBine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XNI",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/**";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Debug;
+		};
+		306DE7481A7B31CF003AA55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = KuharBine/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/XNI",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/**";
+				VALID_ARCHS = "armv7 armv7s";
+			};
+			name = Release;
+		};
+		306DE74A1A7B31CF003AA55C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KuharBineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuharBine.app/KuharBine";
+			};
+			name = Debug;
+		};
+		306DE74B1A7B31CF003AA55C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = KuharBineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KuharBine.app/KuharBine";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		306DE71E1A7B31CF003AA55C /* Build configuration list for PBXProject "KuharBine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306DE7441A7B31CF003AA55C /* Debug */,
+				306DE7451A7B31CF003AA55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		306DE7461A7B31CF003AA55C /* Build configuration list for PBXNativeTarget "KuharBine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306DE7471A7B31CF003AA55C /* Debug */,
+				306DE7481A7B31CF003AA55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		306DE7491A7B31CF003AA55C /* Build configuration list for PBXNativeTarget "KuharBineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				306DE74A1A7B31CF003AA55C /* Debug */,
+				306DE74B1A7B31CF003AA55C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 306DE71B1A7B31CF003AA55C /* Project object */;
+}
