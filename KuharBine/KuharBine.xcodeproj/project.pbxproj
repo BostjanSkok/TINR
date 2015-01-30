@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB3E1A7BB19400CDD19B /* Constants.m */; };
+		3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB431A7BB1DD00CDD19B /* Enemy.m */; };
+		3037EB471A7BB1F000CDD19B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB461A7BB1F000CDD19B /* Level.m */; };
+		3037EB4A1A7BB21200CDD19B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB491A7BB21200CDD19B /* Player.m */; };
+		3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB4C1A7BB22400CDD19B /* Plate.m */; };
+		3037EB4E1A7BB4C500CDD19B /* libExpress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3037EB2C1A7BAE6C00CDD19B /* libExpress.a */; };
 		306DE7291A7B31CF003AA55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7281A7B31CF003AA55C /* main.m */; };
 		306DE7431A7B31CF003AA55C /* KuharBineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7421A7B31CF003AA55C /* KuharBineTests.m */; };
 		306DE74D1A7B3420003AA55C /* libXNI.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE74C1A7B3420003AA55C /* libXNI.a */; };
@@ -20,7 +26,6 @@
 		306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75C1A7B34F1003AA55C /* CoreGraphics.framework */; };
 		306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75E1A7B3503003AA55C /* UIKit.framework */; };
 		306DE7651A7B3681003AA55C /* KuharBine.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7641A7B3681003AA55C /* KuharBine.m */; };
-		306DE7941A7B76FD003AA55C /* libKitchenEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE78F1A7B767A003AA55C /* libKitchenEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,19 +43,12 @@
 			remoteGlobalIDString = B54278A0127705FF0015E810;
 			remoteInfo = "Express Release";
 		};
-		3037EB341A7BAE7300CDD19B /* PBXContainerItemProxy */ = {
+		3037EB4F1A7BB4CE00CDD19B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC07E0554694100DB518D;
-			remoteInfo = "Artificial I";
-		};
-		3037EB361A7BAE7300CDD19B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = B5742CCB1276E20D00993B4F;
-			remoteInfo = "Artificial I Release";
+			containerPortal = 3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = Express;
 		};
 		306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -73,18 +71,23 @@
 			remoteGlobalIDString = 306DE77D1A7B74B1003AA55C;
 			remoteInfo = KitchenEngineTests;
 		};
-		306DE7921A7B76A0003AA55C /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 306DE7711A7B74B1003AA55C;
-			remoteInfo = KitchenEngine;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Express.xcodeproj; path = ../Express/Express.xcodeproj; sourceTree = "<group>"; };
-		3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = "<group>"; };
+		3037EB3B1A7BB14900CDD19B /* Namespace.KuharBine.classes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Namespace.KuharBine.classes.h; sourceTree = "<group>"; };
+		3037EB3C1A7BB16A00CDD19B /* Namespace.KuharBine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Namespace.KuharBine.h; sourceTree = "<group>"; };
+		3037EB3D1A7BB19400CDD19B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		3037EB3E1A7BB19400CDD19B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		3037EB421A7BB1DD00CDD19B /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		3037EB431A7BB1DD00CDD19B /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		3037EB451A7BB1F000CDD19B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
+		3037EB461A7BB1F000CDD19B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
+		3037EB481A7BB21200CDD19B /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		3037EB491A7BB21200CDD19B /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		3037EB4B1A7BB22400CDD19B /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plate.h; sourceTree = "<group>"; };
+		3037EB4C1A7BB22400CDD19B /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plate.m; sourceTree = "<group>"; };
+		3037EB511A7BB87400CDD19B /* KuharBine_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KuharBine_Prefix.pch; sourceTree = "<group>"; };
 		306DE7231A7B31CF003AA55C /* KuharBine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KuharBine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		306DE7271A7B31CF003AA55C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		306DE7281A7B31CF003AA55C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -111,7 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				306DE7941A7B76FD003AA55C /* libKitchenEngine.a in Frameworks */,
+				3037EB4E1A7BB4C500CDD19B /* libExpress.a in Frameworks */,
 				306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */,
 				306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */,
 				306DE75B1A7B34CF003AA55C /* Foundation.framework in Frameworks */,
@@ -144,19 +147,32 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		3037EB301A7BAE7300CDD19B /* Products */ = {
+		3037EB401A7BB1AA00CDD19B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				3037EB351A7BAE7300CDD19B /* libArtificial.a */,
-				3037EB371A7BAE7300CDD19B /* libArtificial.a */,
+				3037EB451A7BB1F000CDD19B /* Level.h */,
+				3037EB461A7BB1F000CDD19B /* Level.m */,
+				3037EB411A7BB1BD00CDD19B /* Objects */,
 			);
-			name = Products;
+			name = Scene;
+			sourceTree = "<group>";
+		};
+		3037EB411A7BB1BD00CDD19B /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				3037EB421A7BB1DD00CDD19B /* Enemy.h */,
+				3037EB431A7BB1DD00CDD19B /* Enemy.m */,
+				3037EB481A7BB21200CDD19B /* Player.h */,
+				3037EB491A7BB21200CDD19B /* Player.m */,
+				3037EB4B1A7BB22400CDD19B /* Plate.h */,
+				3037EB4C1A7BB22400CDD19B /* Plate.m */,
+			);
+			name = Objects;
 			sourceTree = "<group>";
 		};
 		306DE71A1A7B31CF003AA55C = {
 			isa = PBXGroup;
 			children = (
-				3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */,
 				3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */,
 				306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */,
 				306DE7601A7B3526003AA55C /* Frameworks */,
@@ -181,6 +197,7 @@
 				306DE7621A7B3574003AA55C /* Assets */,
 				306DE7611A7B3563003AA55C /* Classes */,
 				306DE7261A7B31CF003AA55C /* Supporting Files */,
+				3037EB511A7BB87400CDD19B /* KuharBine_Prefix.pch */,
 			);
 			path = KuharBine;
 			sourceTree = "<group>";
@@ -231,8 +248,13 @@
 		306DE7611A7B3563003AA55C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				3037EB401A7BB1AA00CDD19B /* Scene */,
+				3037EB3E1A7BB19400CDD19B /* Constants.m */,
+				3037EB3D1A7BB19400CDD19B /* Constants.h */,
 				306DE7631A7B3681003AA55C /* KuharBine.h */,
 				306DE7641A7B3681003AA55C /* KuharBine.m */,
+				3037EB3B1A7BB14900CDD19B /* Namespace.KuharBine.classes.h */,
+				3037EB3C1A7BB16A00CDD19B /* Namespace.KuharBine.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -267,7 +289,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				306DE7931A7B76A0003AA55C /* PBXTargetDependency */,
+				3037EB501A7BB4CE00CDD19B /* PBXTargetDependency */,
 			);
 			name = KuharBine;
 			productName = KuharBine;
@@ -323,10 +345,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 3037EB301A7BAE7300CDD19B /* Products */;
-					ProjectRef = 3037EB2F1A7BAE7300CDD19B /* Artificial I.xcodeproj */;
-				},
-				{
 					ProductGroup = 3037EB261A7BAE6C00CDD19B /* Products */;
 					ProjectRef = 3037EB251A7BAE6C00CDD19B /* Express.xcodeproj */;
 				},
@@ -356,20 +374,6 @@
 			fileType = archive.ar;
 			path = libExpress.a;
 			remoteRef = 3037EB2D1A7BAE6C00CDD19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3037EB351A7BAE7300CDD19B /* libArtificial.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libArtificial.a;
-			remoteRef = 3037EB341A7BAE7300CDD19B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		3037EB371A7BAE7300CDD19B /* libArtificial.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libArtificial.a;
-			remoteRef = 3037EB361A7BAE7300CDD19B /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 		306DE78F1A7B767A003AA55C /* libKitchenEngine.a */ = {
@@ -410,8 +414,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */,
+				3037EB471A7BB1F000CDD19B /* Level.m in Sources */,
+				3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */,
 				306DE7291A7B31CF003AA55C /* main.m in Sources */,
 				306DE7651A7B3681003AA55C /* KuharBine.m in Sources */,
+				3037EB4A1A7BB21200CDD19B /* Player.m in Sources */,
+				3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,15 +435,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		3037EB501A7BB4CE00CDD19B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Express;
+			targetProxy = 3037EB4F1A7BB4CE00CDD19B /* PBXContainerItemProxy */;
+		};
 		306DE73E1A7B31CF003AA55C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 306DE7221A7B31CF003AA55C /* KuharBine */;
 			targetProxy = 306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */;
-		};
-		306DE7931A7B76A0003AA55C /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KitchenEngine;
-			targetProxy = 306DE7921A7B76A0003AA55C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -478,6 +487,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Express/Classes/**";
 			};
 			name = Debug;
 		};
@@ -513,6 +523,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../Express/Classes/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -521,8 +532,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KuharBine/KuharBine_Prefix.pch";
 				INFOPLIST_FILE = KuharBine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -531,7 +543,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/** \"$(SRCROOT)/../Express/\"/**";
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
@@ -540,8 +552,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KuharBine/KuharBine_Prefix.pch";
 				INFOPLIST_FILE = KuharBine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -550,7 +563,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/XNI/\"/** \"$(SRCROOT)/../Express/\"/**";
 				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
