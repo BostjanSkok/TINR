@@ -15,6 +15,17 @@
     self =[super init];
     if(self){
         graphics = [[GraphicsDeviceManager alloc] initWithGame:self];
+        
+        //self.isFixedTimeStep = NO;
+        
+       
+       // [self.components addComponent:[[[TouchPanelHelper alloc] initWithGame:self] autorelease]];
+        
+       // stateStack = [[NSMutableArray alloc] init];
+        
+        //[SoundEngine initializeWithGame:self];
+        
+        //progress = [[GameProgress loadProgress] retain];
     }
     return self;
 }

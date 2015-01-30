@@ -20,6 +20,7 @@
 		306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75C1A7B34F1003AA55C /* CoreGraphics.framework */; };
 		306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE75E1A7B3503003AA55C /* UIKit.framework */; };
 		306DE7651A7B3681003AA55C /* KuharBine.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7641A7B3681003AA55C /* KuharBine.m */; };
+		306DE7941A7B76FD003AA55C /* libKitchenEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 306DE78F1A7B767A003AA55C /* libKitchenEngine.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 306DE7221A7B31CF003AA55C;
 			remoteInfo = KuharBine;
+		};
+		306DE78E1A7B767A003AA55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 306DE7721A7B74B1003AA55C;
+			remoteInfo = KitchenEngine;
+		};
+		306DE7901A7B767A003AA55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 306DE77D1A7B74B1003AA55C;
+			remoteInfo = KitchenEngineTests;
+		};
+		306DE7921A7B76A0003AA55C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 306DE7711A7B74B1003AA55C;
+			remoteInfo = KitchenEngine;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +73,7 @@
 		306DE75E1A7B3503003AA55C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		306DE7631A7B3681003AA55C /* KuharBine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KuharBine.h; sourceTree = "<group>"; };
 		306DE7641A7B3681003AA55C /* KuharBine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KuharBine.m; sourceTree = "<group>"; };
+		306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KitchenEngine.xcodeproj; path = ../KitchenEngine/KitchenEngine.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				306DE7941A7B76FD003AA55C /* libKitchenEngine.a in Frameworks */,
 				306DE75F1A7B3503003AA55C /* UIKit.framework in Frameworks */,
 				306DE75D1A7B34F1003AA55C /* CoreGraphics.framework in Frameworks */,
 				306DE75B1A7B34CF003AA55C /* Foundation.framework in Frameworks */,
@@ -84,6 +108,7 @@
 		306DE71A1A7B31CF003AA55C = {
 			isa = PBXGroup;
 			children = (
+				306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */,
 				306DE7601A7B3526003AA55C /* Frameworks */,
 				306DE7251A7B31CF003AA55C /* KuharBine */,
 				306DE73F1A7B31CF003AA55C /* KuharBineTests */,
@@ -169,6 +194,15 @@
 			name = Assets;
 			sourceTree = "<group>";
 		};
+		306DE78A1A7B767A003AA55C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				306DE78F1A7B767A003AA55C /* libKitchenEngine.a */,
+				306DE7911A7B767A003AA55C /* KitchenEngineTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +217,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				306DE7931A7B76A0003AA55C /* PBXTargetDependency */,
 			);
 			name = KuharBine;
 			productName = KuharBine;
@@ -236,6 +271,12 @@
 			mainGroup = 306DE71A1A7B31CF003AA55C;
 			productRefGroup = 306DE7241A7B31CF003AA55C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 306DE78A1A7B767A003AA55C /* Products */;
+					ProjectRef = 306DE7891A7B767A003AA55C /* KitchenEngine.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				306DE7221A7B31CF003AA55C /* KuharBine */,
@@ -243,6 +284,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		306DE78F1A7B767A003AA55C /* libKitchenEngine.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKitchenEngine.a;
+			remoteRef = 306DE78E1A7B767A003AA55C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		306DE7911A7B767A003AA55C /* KitchenEngineTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KitchenEngineTests.xctest;
+			remoteRef = 306DE7901A7B767A003AA55C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		306DE7211A7B31CF003AA55C /* Resources */ = {
@@ -286,6 +344,11 @@
 			isa = PBXTargetDependency;
 			target = 306DE7221A7B31CF003AA55C /* KuharBine */;
 			targetProxy = 306DE73D1A7B31CF003AA55C /* PBXContainerItemProxy */;
+		};
+		306DE7931A7B76A0003AA55C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KitchenEngine;
+			targetProxy = 306DE7921A7B76A0003AA55C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
