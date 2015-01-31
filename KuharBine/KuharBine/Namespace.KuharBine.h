@@ -5,9 +5,16 @@
 //  Created by SKOK, BOŠTJAN on 30/01/15.
 //  Copyright (c) 2015 fri. All rights reserved.
 //
+#import "KuharBine.h"
+#import "GameState.h"
 
-#ifndef KuharBine_Namespace_KuharBine_h
-#define KuharBine_Namespace_KuharBine_h
+//GUI
+#import "Menu.h"
+#import "MainMenu.h"
+#import "Button.h"
+#import "GuiRenderer.h"
 
 
-#endif
+#import "GameRenderer.h"
+
+#import "Level.h"

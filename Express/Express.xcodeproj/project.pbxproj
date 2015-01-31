@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3037EB381A7BAEA500CDD19B /* libArtificial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5427890127704640015E810 /* libArtificial.a */; };
+		306DE7D41A7D5CF2003AA55C /* libArtificial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36508E14B4AE74003A2828 /* libArtificial.a */; };
 		AA747D9F0F9514B9006C5449 /* Express_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Express_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B506F26F129C0252002270AC /* ISceneUser.h in Headers */ = {isa = PBXBuildFile; fileRef = B506F26E129C0252002270AC /* ISceneUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -91,30 +91,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B542788F127704640015E810 /* PBXContainerItemProxy */ = {
+		4E36508D14B4AE74003A2828 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B542788A127704640015E810 /* Artificial I.xcodeproj */;
+			containerPortal = 4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = D2AAC07E0554694100DB518D;
 			remoteInfo = "Artificial I";
 		};
-		B5427891127704640015E810 /* PBXContainerItemProxy */ = {
+		4E36508F14B4AE74003A2828 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B542788A127704640015E810 /* Artificial I.xcodeproj */;
+			containerPortal = 4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = B5742CCB1276E20D00993B4F;
 			remoteInfo = "Artificial I Release";
 		};
-		B54278FC127706570015E810 /* PBXContainerItemProxy */ = {
+		4E36509114B4AEC1003A2828 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = B542788A127704640015E810 /* Artificial I.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = B5742CCA1276E20D00993B4F;
-			remoteInfo = "Artificial I Release";
-		};
-		B54278FE127706660015E810 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B542788A127704640015E810 /* Artificial I.xcodeproj */;
+			containerPortal = 4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */;
 			proxyType = 1;
 			remoteGlobalIDString = D2AAC07D0554694100DB518D;
 			remoteInfo = "Artificial I";
@@ -129,6 +122,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Express_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Express_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B506F26E129C0252002270AC /* ISceneUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ISceneUser.h; sourceTree = "<group>"; };
@@ -144,7 +138,6 @@
 		B506F58E129C765E002270AC /* CollisionAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollisionAlgorithm.h; sourceTree = "<group>"; };
 		B506F58F129C765E002270AC /* CollisionAlgorithm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollisionAlgorithm.m; sourceTree = "<group>"; };
 		B506F676129C83B0002270AC /* ICustomUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICustomUpdate.h; sourceTree = "<group>"; };
-		B542788A127704640015E810 /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		B54278A0127705FF0015E810 /* libExpress.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libExpress.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54278F91277063B0015E810 /* Express.Graphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Express.Graphics.h; sourceTree = "<group>"; };
 		B5427901127706910015E810 /* Express.Graphics.classes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Express.Graphics.classes.h; sourceTree = "<group>"; };
@@ -226,7 +219,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3037EB381A7BAEA500CDD19B /* libArtificial.a in Frameworks */,
+				306DE7D41A7D5CF2003AA55C /* libArtificial.a in Frameworks */,
 				AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -246,7 +239,7 @@
 		0867D691FE84028FC02AAC07 /* Express */ = {
 			isa = PBXGroup;
 			children = (
-				B542788A127704640015E810 /* Artificial I.xcodeproj */,
+				4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */,
 				08FB77AEFE84172EC02AAC07 /* Classes */,
 				32C88DFF0371C24200C91783 /* Other Sources */,
 				0867D69AFE84028FC02AAC07 /* Frameworks */,
@@ -279,11 +272,11 @@
 			name = "Other Sources";
 			sourceTree = "<group>";
 		};
-		B542788B127704640015E810 /* Products */ = {
+		4E36508514B4AE73003A2828 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5427890127704640015E810 /* libArtificial.a */,
-				B5427892127704640015E810 /* libArtificial.a */,
+				4E36508E14B4AE74003A2828 /* libArtificial.a */,
+				4E36509014B4AE74003A2828 /* libArtificial.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -550,7 +543,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				B54278FD127706570015E810 /* PBXTargetDependency */,
 				B5427948127709440015E810 /* PBXTargetDependency */,
 			);
 			name = "Express Release";
@@ -569,7 +561,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				B54278FF127706660015E810 /* PBXTargetDependency */,
+				4E36509214B4AEC1003A2828 /* PBXTargetDependency */,
 			);
 			name = Express;
 			productName = Express;
@@ -582,7 +574,7 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0600;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "Express" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -599,8 +591,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = B542788B127704640015E810 /* Products */;
-					ProjectRef = B542788A127704640015E810 /* Artificial I.xcodeproj */;
+					ProductGroup = 4E36508514B4AE73003A2828 /* Products */;
+					ProjectRef = 4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -612,20 +604,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		B5427890127704640015E810 /* libArtificial.a */ = {
+		4E36508E14B4AE74003A2828 /* libArtificial.a */ = {
 			isa = PBXReferenceProxy;
-			comments = source;
 			fileType = archive.ar;
 			path = libArtificial.a;
-			remoteRef = B542788F127704640015E810 /* PBXContainerItemProxy */;
+			remoteRef = 4E36508D14B4AE74003A2828 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B5427892127704640015E810 /* libArtificial.a */ = {
+		4E36509014B4AE74003A2828 /* libArtificial.a */ = {
 			isa = PBXReferenceProxy;
-			comments = release;
 			fileType = archive.ar;
 			path = libArtificial.a;
-			remoteRef = B5427891127704640015E810 /* PBXContainerItemProxy */;
+			remoteRef = 4E36508F14B4AE74003A2828 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -686,15 +676,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B54278FD127706570015E810 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Artificial I Release";
-			targetProxy = B54278FC127706570015E810 /* PBXContainerItemProxy */;
-		};
-		B54278FF127706660015E810 /* PBXTargetDependency */ = {
+		4E36509214B4AEC1003A2828 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Artificial I";
-			targetProxy = B54278FE127706660015E810 /* PBXContainerItemProxy */;
+			targetProxy = 4E36509114B4AEC1003A2828 /* PBXContainerItemProxy */;
 		};
 		B5427948127709440015E810 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -717,11 +702,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Express_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Express;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../\"/**";
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -734,11 +717,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Express_Prefix.pch;
 				INSTALL_PATH = /usr/local/lib;
-				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = Express;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../\"/**";
-				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -749,12 +730,12 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "\"~/Dropbox/Teaching/Razvoj racunalniskih iger/Projekti/Artificial I/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include\" ~/Dropbox/Work/Retronator/Projects/XNI/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
@@ -764,11 +745,11 @@
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 3.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				OTHER_LDFLAGS = "-ObjC";
 				PREBINDING = NO;
 				SDKROOT = iphoneos;
-				USER_HEADER_SEARCH_PATHS = "\"~/Dropbox/Teaching/Razvoj racunalniskih iger/Projekti/Artificial I/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include\" ~/Dropbox/Work/Retronator/Projects/XNI/build/${BUILD_STYLE}-${PLATFORM_NAME}/usr/local/include";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Release;
 		};

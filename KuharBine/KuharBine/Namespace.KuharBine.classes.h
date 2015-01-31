@@ -6,8 +6,12 @@
 //  Copyright (c) 2015 fri. All rights reserved.
 //
 
-#ifndef KuharBine_Namespace_KuharBine_classes_h
-#define KuharBine_Namespace_KuharBine_classes_h
+@class KuharBine, Constants;//, GameProgress;
 
+@class GameState;
+@class Button;
 
-#endif
+@class Menu, MainMenu;//, OpponentSelection, LevelSelection, Options;
+@class GameRenderer, GuiRenderer;
+
+@class Level;
