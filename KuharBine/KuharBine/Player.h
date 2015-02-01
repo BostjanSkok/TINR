@@ -12,11 +12,11 @@
 
 @interface Player : GameComponent {
    Mario *mario;
- 
+   
 }
 
 - (id) initWithGame:(Game *)theGame mario:(Mario*)theMario;
 
 - (void) reset;
-
+//@property (nonatomic, readonly) Mario *mario;
 @end

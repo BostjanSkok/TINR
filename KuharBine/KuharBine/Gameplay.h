@@ -20,7 +20,7 @@
     
     GameRenderer *renderer;
     GuiRenderer *hudRenderer;
-  //  PhysicsEngine *physics;
+    PhysicsEngine *physics;
 }
 
 - (id) initSinglePlayerWithGame:(Game*)theGame;

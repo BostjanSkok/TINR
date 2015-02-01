@@ -16,19 +16,29 @@
     if (self != nil) {
         position = [[Vector2 alloc] init];
         velocity = [[Vector2 alloc] init];
-        mass = 20;
-        radius = 30;
-    
+        targetPosition = [[Vector2 alloc] init];
+        isMoving=false;
     }
     return self;
 }
 
-@synthesize position, velocity, mass, radius;
+@synthesize position, velocity, isMoving;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];
 }
 
+- (void) GoLeft {
+    Vector2 *leftSpeed = [[Vector2 alloc] init];
+    leftSpeed.x=-30;
+   [velocity set: leftSpeed];
+}
+
+- (void) GoRight {
+    Vector2 *leftSpeed = [[Vector2 alloc] init];
+    leftSpeed.x=30;
+    [velocity set: leftSpeed];
+}
 - (void) updateWithGameTime:(GameTime *)gameTime {
   
 }
@@ -39,8 +49,6 @@
     if (self != nil){
         position = [[Vector2 alloc] init];
         velocity = [[Vector2 alloc] init];
-        mass = 20;
-        radius = 30;
      
         self.position.x = [aDecoder decodeFloatForKey:[NSString stringWithFormat:@"MarioX"]];
         self.position.y = [aDecoder decodeFloatForKey:[NSString stringWithFormat:@"MarioY"]];

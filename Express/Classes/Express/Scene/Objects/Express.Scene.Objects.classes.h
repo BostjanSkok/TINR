@@ -12,6 +12,7 @@
 @protocol ICustomCollider;
 
 @protocol IParticle;
+@protocol IRectParticle;
 
 @protocol ILifetime;
 @class Lifetime;

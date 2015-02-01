@@ -14,6 +14,7 @@
 
 #import "IParticleCollider.h"
 #import "IParticle.h"
+#import "IRectParticle.h"
 #import "IHalfPlaneCollider.h"
 #import "IAAHalfPlaneCollider.h"
 #import "IRectangleCollider.h"

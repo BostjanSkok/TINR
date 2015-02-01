@@ -9,14 +9,21 @@
 #import <Foundation/Foundation.h>
 #import "Express.Scene.Objects.h"
 #import "Namespace.KuharBine.classes.h"
+#import "IEnemy.h"
 
-@interface Enemy : NSObject <IParticle>{
+@interface Enemy : NSObject <IRectParticle , IEnemy,ICustomCollider>{
     Vector2 *position;
     Vector2 *velocity;
     //If true colision detection active
+    int enemyType;
     bool isTop;
-    float radius;
-    float mass;
+    float width;
+    float height;
+    
+    NSObject *under;
+    NSObject *over;
+    
+    Vector2 *targetPosition;
 }
 
 

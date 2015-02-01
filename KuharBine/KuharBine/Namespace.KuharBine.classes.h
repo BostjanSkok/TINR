@@ -17,4 +17,9 @@
 
 @class Level;
 @class Mario;
+@class Enemy;
+@class Plate;
 @class Player;
+@class HumanPlayer;
+
+@class PhysicsEngine;

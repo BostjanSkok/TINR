@@ -35,12 +35,34 @@
 	spriteBatch = [[SpriteBatch alloc] initWithGraphicsDevice:self.graphicsDevice];
 	
 	// Load common sprites from main game content manager.	
-	/*malletSprite = [[Sprite alloc] init];
-	malletSprite.texture = [self.game.content load:@"Obj1Static"];
-	malletSprite.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:64];
-	malletSprite.origin = [Vector2 vectorWithX:1 y:1];
-
-	malletShadow = [[Sprite alloc] init];
+    enemies[0]= [[Sprite alloc] init];
+	enemies[0].texture = [self.game.content load:@"Obj1Static"];
+	enemies[0].sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:64];
+	enemies[0].origin = [Vector2 vectorWithX:1 y:1];
+    
+    enemies[1]= [[Sprite alloc] init];
+    enemies[1].texture = [self.game.content load:@"Obj2Static"];
+    enemies[1].sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:64];
+    enemies[1].origin = [Vector2 vectorWithX:1 y:1];
+    
+    enemies[2]= [[Sprite alloc] init];
+    enemies[2].texture = [self.game.content load:@"Obj3Static"];
+    enemies[2].sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:64];
+    enemies[2].origin = [Vector2 vectorWithX:1 y:1];
+    
+    enemies[3]= [[Sprite alloc] init];
+    enemies[3].texture = [self.game.content load:@"Obj4Static"];
+    enemies[3].sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:64];
+    enemies[3].origin = [Vector2 vectorWithX:1 y:1];
+    
+   // AnimatedSprite *marioSprite = [[AnimatedSprite alloc] init];
+    //[marioSprite addFrame:<#(AnimatedSpriteFrame *)#>]
+    
+    marioSprite= [[Sprite alloc] init];
+    marioSprite.texture = [self.game.content load:@"P1Animation32x64Tiles"];
+    marioSprite.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:32];
+    marioSprite.origin = [Vector2 vectorWithX:1 y:1];
+    /*malletShadow = [[Sprite alloc] init];
 	malletShadow.texture = [self.game.content load:@"SceneItems"];
 	malletShadow.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:1 height:1];
 	malletShadow.origin = [Vector2 vectorWithX:1 y:1];
@@ -68,38 +90,35 @@
 	[spriteBatch draw:background to:[Vector2 vectorWithX:0 y:-20] fromRectangle:nil tintWithColor:[Color white]
 			 rotation:0 origin:[Vector2 zero] scaleUniform:1 effects:SpriteEffectsNone layerDepth:0.9];
 
-	/*for (id item in level.scene) {
+	for (id item in level.scene) {
 		
 		id<IPosition> itemWithPosition = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
 		
-		Sprite *shadowSprite = nil;
+		
 		Sprite *sprite = nil;		
 		SpriteEffects effects = SpriteEffectsNone;
-		if ([item isKindOfClass:[Mallet class]]) {
-			sprite = malletSprite;
-			shadowSprite = malletShadow;
-			Mallet *mallet = (Mallet*)item;
-			if (mallet.position.y > 230) {
-				effects = SpriteEffectsFlipVertically;
-			}
-		} else if ([item isKindOfClass:[Puck class]]) {
-			sprite = puckSprite;
-			shadowSprite = puckShadow;
+		if ([item isKindOfClass:[Enemy class]]) {
+            Enemy *enemy = (Enemy*)item;
+            sprite = (Sprite*)enemies[enemy.enemyType];
+			
+		} else if ([item isKindOfClass:[Mario class]]) {
+			sprite = marioSprite;
+			
 		}
 		
-		/*if (itemWithPosition && shadowSprite) {
+      /*  if (itemWithPosition && shadowSprite) {
 			Vector2 *shadowPosition = [[[Vector2 subtract:lightPosition by:itemWithPosition.position] multiplyBy:-0.02] add:itemWithPosition.position];
 			
 			spriteBatch draw:shadowSprite.texture to:shadowPosition fromRectangle:shadowSprite.sourceRectangle tintWithColor:[[Color white] multiply:0.5]
 					 rotation:0 origin:shadowSprite.origin scaleUniform:1 effects:SpriteEffectsNone layerDepth:0.5f];
 		}*/
-	/*
+	
 		if (itemWithPosition && sprite) {
 			[spriteBatch draw:sprite.texture to:itemWithPosition.position fromRectangle:sprite.sourceRectangle tintWithColor:[Color white]
 					 rotation:0 origin:sprite.origin scaleUniform:2 effects:effects layerDepth:0.1];
 		}
 				
-	}*/
+	}
 	
 	[spriteBatch end];
 }
@@ -110,10 +129,8 @@
 
 - (void) dealloc
 {
-	[malletSprite release];
-	[malletShadow release];
-	[puckSprite release];
-	[puckShadow release];
+	[enemies release];
+
 	[content release];
 	[spriteBatch release];
 	[super dealloc];

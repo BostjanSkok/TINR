@@ -16,9 +16,18 @@
 
 
 #import "GameRenderer.h"
+#import "PhysicsEngine.h"
 
 #import "Level.h"
 
 #import "Mario.h"
 #import "Player.h"
+#import "HumanPlayer.h"
 #import "Gameplay.h"
+#import "Enemy.h"
+#import "IEnemy.h"
+#import "Constants.h"
+
+#import "Plate.h"
+#import "IStacked.h"
+#import "IMoveToTarget.h"

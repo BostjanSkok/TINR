@@ -9,5 +9,18 @@
 #import <Foundation/Foundation.h>
 
 @interface Constants : NSObject
-+ (NSString*) MariotFilePath;
+
++ (float) topY;
++ (float) bottomY;
+
++ (float) rail1X;
++ (float) rail2X;
++ (float) rail3X;
++ (float) rail4X;
+
++ (float) gravity;
+
++ (float) spawnDelay;
+
++ (NSString*) MarioFilePath;
 @end

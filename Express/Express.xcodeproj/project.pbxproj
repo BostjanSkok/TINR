@@ -122,6 +122,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		307545541A7DCCC20096AE6A /* IRectParticle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRectParticle.h; sourceTree = "<group>"; };
 		4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Express_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Express_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -342,6 +343,7 @@
 				B5F418FD1277B9D90012BAF1 /* Lifetime.h */,
 				B5F418FE1277B9D90012BAF1 /* Lifetime.m */,
 				B5D463CE12804B0D0029B3A6 /* IParticle.h */,
+				307545541A7DCCC20096AE6A /* IRectParticle.h */,
 				B506F26E129C0252002270AC /* ISceneUser.h */,
 				B506F676129C83B0002270AC /* ICustomUpdate.h */,
 			);

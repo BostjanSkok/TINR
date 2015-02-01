@@ -14,9 +14,8 @@
 @interface GameRenderer : DrawableGameComponent {
 	// Resources
 	ContentManager *content;
-	Sprite *malletSprite, *malletShadow;
-	Sprite *puckSprite, *puckShadow;
-	
+    Sprite *enemies[4];
+    Sprite *marioSprite;
 	Texture2D *background;
 	Vector2 *lightPosition;
 	

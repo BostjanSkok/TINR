@@ -39,6 +39,13 @@
 		306DE7E41A7D78AB003AA55C /* Mario.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7E31A7D78AB003AA55C /* Mario.m */; };
 		307545441A7D93EE0096AE6A /* GameBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 307545431A7D93EE0096AE6A /* GameBg.png */; };
 		307545461A7DA1A70096AE6A /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7C11A7D5566003AA55C /* Level.m */; };
+		3075454A1A7DACF50096AE6A /* Obj2Static.png in Resources */ = {isa = PBXBuildFile; fileRef = 307545471A7DACF50096AE6A /* Obj2Static.png */; };
+		3075454B1A7DACF50096AE6A /* Obj3Static.png in Resources */ = {isa = PBXBuildFile; fileRef = 307545481A7DACF50096AE6A /* Obj3Static.png */; };
+		3075454C1A7DACF50096AE6A /* Obj4Static.png in Resources */ = {isa = PBXBuildFile; fileRef = 307545491A7DACF50096AE6A /* Obj4Static.png */; };
+		3075454E1A7DACFD0096AE6A /* Obj1Static.png in Resources */ = {isa = PBXBuildFile; fileRef = 3075454D1A7DACFD0096AE6A /* Obj1Static.png */; };
+		307545531A7DC5130096AE6A /* PhysicsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 307545521A7DC5130096AE6A /* PhysicsEngine.m */; };
+		307545591A7DE14A0096AE6A /* HumanPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307545581A7DE14A0096AE6A /* HumanPlayer.m */; };
+		3075455C1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +148,18 @@
 		306DE7E21A7D78AB003AA55C /* Mario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mario.h; sourceTree = "<group>"; };
 		306DE7E31A7D78AB003AA55C /* Mario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mario.m; sourceTree = "<group>"; };
 		307545431A7D93EE0096AE6A /* GameBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameBg.png; path = Assets/GameBg.png; sourceTree = SOURCE_ROOT; };
+		307545471A7DACF50096AE6A /* Obj2Static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Obj2Static.png; path = Assets/Obj2Static.png; sourceTree = SOURCE_ROOT; };
+		307545481A7DACF50096AE6A /* Obj3Static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Obj3Static.png; path = Assets/Obj3Static.png; sourceTree = SOURCE_ROOT; };
+		307545491A7DACF50096AE6A /* Obj4Static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Obj4Static.png; path = Assets/Obj4Static.png; sourceTree = SOURCE_ROOT; };
+		3075454D1A7DACFD0096AE6A /* Obj1Static.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Obj1Static.png; path = Assets/Obj1Static.png; sourceTree = SOURCE_ROOT; };
+		3075454F1A7DAF880096AE6A /* IEnemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IEnemy.h; sourceTree = "<group>"; };
+		307545511A7DC5130096AE6A /* PhysicsEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhysicsEngine.h; sourceTree = "<group>"; };
+		307545521A7DC5130096AE6A /* PhysicsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsEngine.m; sourceTree = "<group>"; };
+		307545561A7DD0FF0096AE6A /* IStacked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IStacked.h; sourceTree = "<group>"; };
+		307545571A7DE14A0096AE6A /* HumanPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanPlayer.h; sourceTree = "<group>"; };
+		307545581A7DE14A0096AE6A /* HumanPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanPlayer.m; sourceTree = "<group>"; };
+		3075455A1A7DF0750096AE6A /* IMoveToTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMoveToTarget.h; sourceTree = "<group>"; };
+		3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = P1Animation32x64Tiles.png; path = Assets/P1Animation32x64Tiles.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +217,9 @@
 				3037EB4C1A7BB22400CDD19B /* Plate.m */,
 				306DE7E21A7D78AB003AA55C /* Mario.h */,
 				306DE7E31A7D78AB003AA55C /* Mario.m */,
+				3075454F1A7DAF880096AE6A /* IEnemy.h */,
+				307545561A7DD0FF0096AE6A /* IStacked.h */,
+				3075455A1A7DF0750096AE6A /* IMoveToTarget.h */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -280,6 +302,7 @@
 		306DE7611A7B3563003AA55C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				307545501A7DC4F30096AE6A /* Physics */,
 				306DE7DE1A7D7348003AA55C /* Players */,
 				306DE7BF1A7D5520003AA55C /* Level */,
 				306DE7B41A7D5090003AA55C /* Graphics */,
@@ -382,6 +405,8 @@
 			children = (
 				306DE7DF1A7D736D003AA55C /* Player.h */,
 				306DE7E01A7D736D003AA55C /* Player.m */,
+				307545571A7DE14A0096AE6A /* HumanPlayer.h */,
+				307545581A7DE14A0096AE6A /* HumanPlayer.m */,
 			);
 			name = Players;
 			sourceTree = "<group>";
@@ -389,9 +414,23 @@
 		307545421A7D93DF0096AE6A /* Game */ = {
 			isa = PBXGroup;
 			children = (
+				3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */,
+				3075454D1A7DACFD0096AE6A /* Obj1Static.png */,
+				307545471A7DACF50096AE6A /* Obj2Static.png */,
+				307545481A7DACF50096AE6A /* Obj3Static.png */,
+				307545491A7DACF50096AE6A /* Obj4Static.png */,
 				307545431A7D93EE0096AE6A /* GameBg.png */,
 			);
 			name = Game;
+			sourceTree = "<group>";
+		};
+		307545501A7DC4F30096AE6A /* Physics */ = {
+			isa = PBXGroup;
+			children = (
+				307545511A7DC5130096AE6A /* PhysicsEngine.h */,
+				307545521A7DC5130096AE6A /* PhysicsEngine.m */,
+			);
+			name = Physics;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -516,10 +555,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3075454C1A7DACF50096AE6A /* Obj4Static.png in Resources */,
+				3075454A1A7DACF50096AE6A /* Obj2Static.png in Resources */,
+				3075454B1A7DACF50096AE6A /* Obj3Static.png in Resources */,
 				306DE7CD1A7D57A8003AA55C /* Retrotype.bmp in Resources */,
 				307545441A7D93EE0096AE6A /* GameBg.png in Resources */,
 				306DE7CB1A7D57A8003AA55C /* 5x5.bmp in Resources */,
 				306DE7C71A7D5771003AA55C /* StartMenu.png in Resources */,
+				3075455C1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png in Resources */,
+				3075454E1A7DACFD0096AE6A /* Obj1Static.png in Resources */,
 				306DE7CC1A7D57A8003AA55C /* Button.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -541,6 +585,7 @@
 				307545461A7DA1A70096AE6A /* Level.m in Sources */,
 				306DE7E41A7D78AB003AA55C /* Mario.m in Sources */,
 				306DE7A71A7D4D81003AA55C /* Menu.m in Sources */,
+				307545531A7DC5130096AE6A /* PhysicsEngine.m in Sources */,
 				306DE7BD1A7D50C3003AA55C /* GuiRenderer.m in Sources */,
 				3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */,
 				306DE7BC1A7D50C3003AA55C /* GameRenderer.m in Sources */,
@@ -552,6 +597,7 @@
 				306DE7AB1A7D4E17003AA55C /* Button.m in Sources */,
 				3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */,
 				306DE7A21A7D4C3D003AA55C /* MainMenu.m in Sources */,
+				307545591A7DE14A0096AE6A /* HumanPlayer.m in Sources */,
 				306DE7DC1A7D6EAD003AA55C /* Gameplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

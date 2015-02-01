@@ -27,7 +27,7 @@
         [self startInitWithLevelClass];
         
         // Create two human players.
-      //  player [[HumanPlayer alloc] initWithGame:self.game mallet:level.topMallet position:PlayerPositionTop];
+        player =  [[HumanPlayer alloc] initWithGame:self.game mario:level.mario];
        
         
         [self finishInit];
@@ -58,8 +58,8 @@
 - (void) finishInit
 {
     // Create a physics engine and add it to components.
-   // physics = [[PhysicsEngine alloc] initWithGame:self.game level:level];
-    //physics.updateOrder = 20;
+    physics = [[PhysicsEngine alloc] initWithGame:self.game level:level];
+   // physics.updateOrder = 20;
     
     // Create a new renderer for the new level and add it to components.
     renderer = [[GameRenderer alloc] initWithGame:self.game level:level];
@@ -80,7 +80,7 @@
     
     // Setup correct update order.
     player.updateOrder = 0;
-   // physics.updateOrder = 1;
+    physics.updateOrder = 1;
     level.updateOrder = 2;
     level.scene.updateOrder = 3;
     self.updateOrder = 4;
@@ -90,8 +90,8 @@
  //   [self.game.components addComponent:hud];
    // [self.game.components addComponent:hudRenderer];
     [self.game.components addComponent:renderer];
-  //  [self.game.components addComponent:physics];
-  //  [self.game.components addComponent:player];
+    [self.game.components addComponent:physics];
+    [self.game.components addComponent:player];
   
 }
 
@@ -100,8 +100,8 @@
     //[self.game.components removeComponent:hudRenderer];
     [self.game.components removeComponent:level];
     [self.game.components removeComponent:renderer];
-//    [self.game.components removeComponent:physics];
-  //  [self.game.components removeComponent:player];
+    [self.game.components removeComponent:physics];
+    [self.game.components removeComponent:player];
 
 }
 
@@ -117,7 +117,7 @@
     [hudRenderer release];
     [level release];
     [renderer release];
-  //  [physics release];
+    [physics release];
 
     [player release];
     [super dealloc];

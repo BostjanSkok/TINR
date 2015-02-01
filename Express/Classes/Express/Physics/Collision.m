@@ -28,11 +28,15 @@
 	id<IParticleCollider> item1Particle = [item1 conformsToProtocol:@protocol(IParticleCollider)] ? item1 : nil;
 	id<IAARectangleCollider> item1AARectangle = [item1 conformsToProtocol:@protocol(IAARectangleCollider)] ? item1 : nil;
 	
+  //  id<IRectangleCollider> item1Rectangle = [item1 conformsToProtocol:@protocol(IRectangleCollider)] ? item1 : nil;
+    
 	id<IParticleCollider> item2Particle = [item2 conformsToProtocol:@protocol(IParticleCollider)] ? item2 : nil;
 	id<IAAHalfPlaneCollider> item2AAHalfPlane = [item2 conformsToProtocol:@protocol(IAAHalfPlaneCollider)] ? item2 : nil;
 	id<IAARectangleCollider> item2AARectangle = [item2 conformsToProtocol:@protocol(IAARectangleCollider)] ? item2 : nil;
-	
-	if (item1Particle && item2Particle) {
+   // id<IRectangleCollider> item2Rectangle = [item1 conformsToProtocol:@protocol(IRectangleCollider)] ? item2 : nil;
+    
+    
+   if (item1Particle && item2Particle) {
 		[ParticleParticleCollision collisionBetween:item1Particle and:item2Particle];
 		return;
 	} else if (item1Particle && item2AAHalfPlane) {

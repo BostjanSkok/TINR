@@ -10,20 +10,21 @@
 #import "Express.Scene.Objects.h"
 #import "Namespace.KuharBine.classes.h"
 
-@interface Mario : NSObject<IParticle, ICustomUpdate,NSCoding> {
+@interface Mario : NSObject<IMovable,IPosition, ICustomUpdate,NSCoding> {
     Vector2 *position;
     Vector2 *velocity;
-    float radius;
-    float mass;
-    
-    // We store previous position for velocity calculation.
-   // Vector2 *previousPosition;
+    int railL;
+    int railR;
+    BOOL isMoving;// We store previous position for velocity calculation.
+    Vector2 *targetPosition;
 }
-
+@property (nonatomic) BOOL isMoving;
 + (Mario *) loadProgress;
 - (void) saveProgress;
 
 - (void) resetVelocity;
+- (void) GoLeft;
+- (void) GoRight;
 - (void) updateWithGameTime:(GameTime*)gameTime;
 
 @end

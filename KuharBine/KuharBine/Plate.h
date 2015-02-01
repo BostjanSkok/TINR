@@ -8,8 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import "Express.Scene.Objects.h"
+#import "IStacked.h"
 #import "Namespace.KuharBine.classes.h"
 
-@interface Plate : NSObject <IParticle>
+@interface Plate : NSObject <IRectParticle,ICustomCollider,IStacked>
+{
+    Vector2 *position;
+    Vector2 *velocity;
+    float width;
+    float height;
+    int rail;
+    NSObject *under;
+    NSObject *over;
+  Vector2 *targetPosition;
+}
+
 
 @end
