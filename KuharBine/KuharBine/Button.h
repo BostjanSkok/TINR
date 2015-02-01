@@ -31,7 +31,7 @@
 	
 	Color *labelColor, *labelHoverColor, *backgroundColor, *backgroundHoverColor;
 }
-
+- (BOOL) rectContainsVector:(Rectangle*) rect value:(Vector2*) value;
 - (id) initWithInputArea:(Rectangle*)theInputArea background:(Texture2D*)background font:(SpriteFont *)font text:(NSString *)text;
 
 @property (nonatomic, readonly) Rectangle *inputArea;

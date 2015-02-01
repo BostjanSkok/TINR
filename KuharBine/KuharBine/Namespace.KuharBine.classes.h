@@ -9,9 +9,12 @@
 @class KuharBine, Constants;//, GameProgress;
 
 @class GameState;
+@class Gameplay;
 @class Button;
 
 @class Menu, MainMenu;//, OpponentSelection, LevelSelection, Options;
 @class GameRenderer, GuiRenderer;
 
 @class Level;
+@class Mario;
+@class Player;

@@ -18,5 +18,6 @@
     }
     return self;
 }
-
+- (void) activate {}
+- (void) deactivate {}
 @end

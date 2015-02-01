@@ -18,3 +18,7 @@
 #import "GameRenderer.h"
 
 #import "Level.h"
+
+#import "Mario.h"
+#import "Player.h"
+#import "Gameplay.h"

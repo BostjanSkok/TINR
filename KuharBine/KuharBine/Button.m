@@ -70,6 +70,11 @@
 	[theScene removeItem:label];
 }
 
+- (BOOL) rectContainsVector:(Rectangle*) rect value:(Vector2*) value {
+    return (value.x >= rect.x && value.x <= rect.x + rect.width &&
+            value.y >= rect.y && value.y <= rect.y + rect.height);
+}
+
 - (void) updateWithInverseView:(Matrix *)inverseView  {
 	if (!enabled) {
 		return;
@@ -89,7 +94,7 @@
 	for (TouchLocation *touch in touches) {		
         Vector2* touchInScene = [Vector2 transform:touch.position with:inverseView];
         
-		if ([inputArea containsVector:touchInScene] && touch.state != TouchLocationStateInvalid) {
+        if ([self rectContainsVector:inputArea value:touchInScene] && touch.state != TouchLocationStateInvalid) {
 			if (touch.state == TouchLocationStatePressed) {
 				pressedID = touch.identifier;
 				wasPressed = YES;

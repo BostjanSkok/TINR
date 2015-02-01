@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB3E1A7BB19400CDD19B /* Constants.m */; };
 		3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB431A7BB1DD00CDD19B /* Enemy.m */; };
-		3037EB471A7BB1F000CDD19B /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB461A7BB1F000CDD19B /* Level.m */; };
-		3037EB4A1A7BB21200CDD19B /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB491A7BB21200CDD19B /* Player.m */; };
 		3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB4C1A7BB22400CDD19B /* Plate.m */; };
 		306DE7291A7B31CF003AA55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7281A7B31CF003AA55C /* main.m */; };
 		306DE7431A7B31CF003AA55C /* KuharBineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7421A7B31CF003AA55C /* KuharBineTests.m */; };
@@ -36,6 +34,11 @@
 		306DE7CC1A7D57A8003AA55C /* Button.png in Resources */ = {isa = PBXBuildFile; fileRef = 306DE7C91A7D57A8003AA55C /* Button.png */; };
 		306DE7CD1A7D57A8003AA55C /* Retrotype.bmp in Resources */ = {isa = PBXBuildFile; fileRef = 306DE7CA1A7D57A8003AA55C /* Retrotype.bmp */; };
 		306DE7D91A7D5E69003AA55C /* libExpress.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3037EB2E1A7BAE6C00CDD19B /* libExpress.a */; };
+		306DE7DC1A7D6EAD003AA55C /* Gameplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7DB1A7D6EAD003AA55C /* Gameplay.m */; };
+		306DE7E11A7D736D003AA55C /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7E01A7D736D003AA55C /* Player.m */; };
+		306DE7E41A7D78AB003AA55C /* Mario.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7E31A7D78AB003AA55C /* Mario.m */; };
+		307545441A7D93EE0096AE6A /* GameBg.png in Resources */ = {isa = PBXBuildFile; fileRef = 307545431A7D93EE0096AE6A /* GameBg.png */; };
+		307545461A7DA1A70096AE6A /* Level.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7C11A7D5566003AA55C /* Level.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,10 +94,6 @@
 		3037EB3E1A7BB19400CDD19B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		3037EB421A7BB1DD00CDD19B /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		3037EB431A7BB1DD00CDD19B /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
-		3037EB451A7BB1F000CDD19B /* Level.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Level.h; sourceTree = "<group>"; };
-		3037EB461A7BB1F000CDD19B /* Level.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Level.m; sourceTree = "<group>"; };
-		3037EB481A7BB21200CDD19B /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
-		3037EB491A7BB21200CDD19B /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		3037EB4B1A7BB22400CDD19B /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plate.h; sourceTree = "<group>"; };
 		3037EB4C1A7BB22400CDD19B /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plate.m; sourceTree = "<group>"; };
 		3037EB511A7BB87400CDD19B /* KuharBine_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KuharBine_Prefix.pch; sourceTree = "<group>"; };
@@ -135,6 +134,13 @@
 		306DE7C81A7D57A8003AA55C /* 5x5.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = 5x5.bmp; path = Assets/5x5.bmp; sourceTree = SOURCE_ROOT; };
 		306DE7C91A7D57A8003AA55C /* Button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Button.png; path = Assets/Button.png; sourceTree = SOURCE_ROOT; };
 		306DE7CA1A7D57A8003AA55C /* Retrotype.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = Retrotype.bmp; path = Assets/Retrotype.bmp; sourceTree = SOURCE_ROOT; };
+		306DE7DA1A7D6EAD003AA55C /* Gameplay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gameplay.h; sourceTree = "<group>"; };
+		306DE7DB1A7D6EAD003AA55C /* Gameplay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Gameplay.m; sourceTree = "<group>"; };
+		306DE7DF1A7D736D003AA55C /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		306DE7E01A7D736D003AA55C /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		306DE7E21A7D78AB003AA55C /* Mario.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mario.h; sourceTree = "<group>"; };
+		306DE7E31A7D78AB003AA55C /* Mario.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mario.m; sourceTree = "<group>"; };
+		307545431A7D93EE0096AE6A /* GameBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GameBg.png; path = Assets/GameBg.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,8 +184,6 @@
 		3037EB401A7BB1AA00CDD19B /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				3037EB451A7BB1F000CDD19B /* Level.h */,
-				3037EB461A7BB1F000CDD19B /* Level.m */,
 				3037EB411A7BB1BD00CDD19B /* Objects */,
 			);
 			name = Scene;
@@ -190,10 +194,10 @@
 			children = (
 				3037EB421A7BB1DD00CDD19B /* Enemy.h */,
 				3037EB431A7BB1DD00CDD19B /* Enemy.m */,
-				3037EB481A7BB21200CDD19B /* Player.h */,
-				3037EB491A7BB21200CDD19B /* Player.m */,
 				3037EB4B1A7BB22400CDD19B /* Plate.h */,
 				3037EB4C1A7BB22400CDD19B /* Plate.m */,
+				306DE7E21A7D78AB003AA55C /* Mario.h */,
+				306DE7E31A7D78AB003AA55C /* Mario.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -276,6 +280,7 @@
 		306DE7611A7B3563003AA55C /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				306DE7DE1A7D7348003AA55C /* Players */,
 				306DE7BF1A7D5520003AA55C /* Level */,
 				306DE7B41A7D5090003AA55C /* Graphics */,
 				306DE7A81A7D4DE3003AA55C /* Gui */,
@@ -294,6 +299,7 @@
 		306DE7621A7B3574003AA55C /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				307545421A7D93DF0096AE6A /* Game */,
 				306DE7C31A7D5705003AA55C /* Gui */,
 			);
 			name = Assets;
@@ -314,6 +320,8 @@
 				306DE79F1A7D4C20003AA55C /* Menus */,
 				306DE79C1A7D3DBA003AA55C /* GameState.h */,
 				306DE79D1A7D3DBA003AA55C /* GameState.m */,
+				306DE7DA1A7D6EAD003AA55C /* Gameplay.h */,
+				306DE7DB1A7D6EAD003AA55C /* Gameplay.m */,
 			);
 			name = "Game states";
 			sourceTree = "<group>";
@@ -367,6 +375,23 @@
 				306DE7C61A7D5771003AA55C /* StartMenu.png */,
 			);
 			name = Gui;
+			sourceTree = "<group>";
+		};
+		306DE7DE1A7D7348003AA55C /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				306DE7DF1A7D736D003AA55C /* Player.h */,
+				306DE7E01A7D736D003AA55C /* Player.m */,
+			);
+			name = Players;
+			sourceTree = "<group>";
+		};
+		307545421A7D93DF0096AE6A /* Game */ = {
+			isa = PBXGroup;
+			children = (
+				307545431A7D93EE0096AE6A /* GameBg.png */,
+			);
+			name = Game;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -492,6 +517,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				306DE7CD1A7D57A8003AA55C /* Retrotype.bmp in Resources */,
+				307545441A7D93EE0096AE6A /* GameBg.png in Resources */,
 				306DE7CB1A7D57A8003AA55C /* 5x5.bmp in Resources */,
 				306DE7C71A7D5771003AA55C /* StartMenu.png in Resources */,
 				306DE7CC1A7D57A8003AA55C /* Button.png in Resources */,
@@ -512,19 +538,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				307545461A7DA1A70096AE6A /* Level.m in Sources */,
+				306DE7E41A7D78AB003AA55C /* Mario.m in Sources */,
 				306DE7A71A7D4D81003AA55C /* Menu.m in Sources */,
 				306DE7BD1A7D50C3003AA55C /* GuiRenderer.m in Sources */,
 				3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */,
 				306DE7BC1A7D50C3003AA55C /* GameRenderer.m in Sources */,
+				306DE7E11A7D736D003AA55C /* Player.m in Sources */,
 				306DE79E1A7D3DBA003AA55C /* GameState.m in Sources */,
-				3037EB471A7BB1F000CDD19B /* Level.m in Sources */,
 				3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */,
 				306DE7291A7B31CF003AA55C /* main.m in Sources */,
 				306DE7651A7B3681003AA55C /* KuharBine.m in Sources */,
 				306DE7AB1A7D4E17003AA55C /* Button.m in Sources */,
-				3037EB4A1A7BB21200CDD19B /* Player.m in Sources */,
 				3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */,
 				306DE7A21A7D4C3D003AA55C /* MainMenu.m in Sources */,
+				306DE7DC1A7D6EAD003AA55C /* Gameplay.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

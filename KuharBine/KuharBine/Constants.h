@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface Constants : NSObject
-
++ (NSString*) MariotFilePath;
 @end

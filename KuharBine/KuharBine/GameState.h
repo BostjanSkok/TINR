@@ -13,4 +13,6 @@
 {
     KuharBine *kuharBine;
 }
+- (void) activate;
+- (void) deactivate;
 @end

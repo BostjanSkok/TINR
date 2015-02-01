@@ -52,15 +52,7 @@
 	[self.game.components addComponent:scene];
 }
 
-- (void) resetToTop {
-	[self reset];
-//	[puck.position set:topPuckSpawn];
-}
 
-- (void) resetToBottom {
-	[self reset];
-	//[puck.position set:bottomPuckSpawn];
-}
 
 - (void) reset {
 //	[topMallet.position set:topMalletSpawn];

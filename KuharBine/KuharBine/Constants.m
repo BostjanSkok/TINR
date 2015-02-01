@@ -9,5 +9,6 @@
 #import "Constants.h"
 
 @implementation Constants
-
-@end
++ (NSString*) MarioFilePath {
+    return @"KuharBineMarioSave";
+}@end

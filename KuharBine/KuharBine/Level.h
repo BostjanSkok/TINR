@@ -34,7 +34,4 @@
 @property (nonatomic, readonly) NSMutableArray *defenseSpots;
 @property (nonatomic, readonly) NSMutableArray *offenseSpots;*/
 
-- (void) resetToTop;
-- (void) resetToBottom;
-
 @end

@@ -60,7 +60,7 @@
 	
 	options = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:400 width:120 height:64]
 									 background:buttonBackground font:retrotype text:@"Options"];
-	[options.backgroundImage setScaleUniform:2];
+	//[options.backgroundImage setScaleUniform:2];
 	[scene addItem:options];
 }
 
@@ -70,12 +70,10 @@
 	GameState *newState = nil;
 	
 	if (singleplayer.wasReleased) {
-       /*     Class opponentClass = [kuharBine getOpponentClass:1];
-            Class levelClass = [kuharBine getLevelClass:[opponentClass levelType]];
-            Gameplay *gameplay = [[[Gameplay alloc] initSinglePlayerWithGame:self.game
-                                                                  levelClass:levelClass
-                                                                     aiClass:opponentClass] autorelease];*/
-        //   [kuharBine pushState:gameplay];
+        
+           // Class levelClass = [kuharBine getLevelClass];
+        Gameplay *gameplay = [[[Gameplay alloc] initSinglePlayerWithGame:self.game ] autorelease];
+        [kuharBine pushState:gameplay];
 	} else if (multiplayer.wasReleased) {	
 		//newState = [[[LevelSelection alloc] initWithGame:self.game] autorelease];
         exit(0);
