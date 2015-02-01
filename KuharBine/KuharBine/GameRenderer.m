@@ -129,7 +129,7 @@
 
 - (void) dealloc
 {
-	[enemies release];
+	[enemies[4] release];
 
 	[content release];
 	[spriteBatch release];

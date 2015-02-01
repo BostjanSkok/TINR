@@ -18,9 +18,13 @@
 + (float) rail3X;
 + (float) rail4X;
 
++ (float) deltaX;
++ (float) deltaY;
+
 + (float) gravity;
 
 + (float) spawnDelay;
++ (float) playerSpeed;
 
 + (NSString*) MarioFilePath;
 @end

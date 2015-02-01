@@ -157,8 +157,7 @@
 		307545521A7DC5130096AE6A /* PhysicsEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhysicsEngine.m; sourceTree = "<group>"; };
 		307545561A7DD0FF0096AE6A /* IStacked.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IStacked.h; sourceTree = "<group>"; };
 		307545571A7DE14A0096AE6A /* HumanPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanPlayer.h; sourceTree = "<group>"; };
-		307545581A7DE14A0096AE6A /* HumanPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanPlayer.m; sourceTree = "<group>"; };
-		3075455A1A7DF0750096AE6A /* IMoveToTarget.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IMoveToTarget.h; sourceTree = "<group>"; };
+		307545581A7DE14A0096AE6A /* HumanPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanPlayer.m; sourceTree = "<group>"; wrapsLines = 0; };
 		3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = P1Animation32x64Tiles.png; path = Assets/P1Animation32x64Tiles.png; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -219,7 +218,6 @@
 				306DE7E31A7D78AB003AA55C /* Mario.m */,
 				3075454F1A7DAF880096AE6A /* IEnemy.h */,
 				307545561A7DD0FF0096AE6A /* IStacked.h */,
-				3075455A1A7DF0750096AE6A /* IMoveToTarget.h */,
 			);
 			name = Objects;
 			sourceTree = "<group>";

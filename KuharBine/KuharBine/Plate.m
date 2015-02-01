@@ -7,6 +7,7 @@
 //
 
 #import "Plate.h"
+#import "Namespace.KuharBine.h"
 
 @implementation Plate
 
@@ -20,20 +21,40 @@
         width = 30;
         height = 1;
         rail=-1;
+        isTop =true;
+        isMoving=false;
     }
     return self;
 }
 
-@synthesize position, velocity,width,height,over, under,rail;
+@synthesize position, velocity,width,height,over, under,rail,targetPosition;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];
 }
 
+
+- (void) snapToTarget {
+    if(!isMoving)
+        return;
+    if( ABS(position.x - targetPosition.x) < [Constants deltaX] ){
+        if( ABS( position.y - targetPosition.y) < [Constants deltaY] ){
+            [velocity set:[Vector2 zero]];
+            [position set:targetPosition];
+            [targetPosition set:[Vector2 zero]];
+            isMoving=false;
+        }
+    }
+    
+}
+
 -(void) collidedWithItem:(id)item{
    // [self resetVelocity];
+
+    if(isTop && !isMoving){
+        isTop=false;
     over = item;
-    
+    }
 }
 
 @end

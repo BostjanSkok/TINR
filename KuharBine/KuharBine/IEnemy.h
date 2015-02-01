@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "IStacked.h"
-@protocol IEnemy <NSObject,IStacked>
+@protocol IEnemy <NSObject,IMoveToTarget,IStacked>
 
 @property (nonatomic) int enemyType;
 

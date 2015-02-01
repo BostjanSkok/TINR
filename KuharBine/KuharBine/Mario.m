@@ -18,27 +18,68 @@
         velocity = [[Vector2 alloc] init];
         targetPosition = [[Vector2 alloc] init];
         isMoving=false;
+        isFliping=false;
+        toFlip=false;
+        currentRails=0;
+        rails[0] = [Constants rail1X];
+        rails[1] = [Constants rail2X];
+        rails[2] = [Constants rail3X];
+       // rails[3] = [Constants rail4X];
     }
     return self;
 }
 
-@synthesize position, velocity, isMoving;
+@synthesize position, velocity, isMoving,targetPosition,currentRail,isFliping,toFlip;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];
 }
 
+- (void) snapToTarget {
+    if(!isMoving)
+        return;
+    if( ABS(position.x - targetPosition.x) < [Constants deltaX] ){
+        if( ABS( position.y - targetPosition.y) < [Constants deltaY] ){
+             [velocity set:[Vector2 zero]];
+             [position set:targetPosition];
+             [targetPosition set:[Vector2 zero]];
+             isMoving=false;
+        }
+    }
+        
+}
+
 - (void) GoLeft {
+    if(currentRails==0 || isMoving || isFliping)
+        return;
+    currentRails--;
+    targetPosition.x= rails[currentRails];
+    targetPosition.y = position.y;
+    isMoving=true;
     Vector2 *leftSpeed = [[Vector2 alloc] init];
-    leftSpeed.x=-30;
+    leftSpeed.x= -[Constants playerSpeed];
    [velocity set: leftSpeed];
 }
 
 - (void) GoRight {
+    if(currentRails==2 || isMoving || isFliping)
+        return;
+    currentRails++;
+    targetPosition.x= rails[currentRails];
+    targetPosition.y = position.y;
+    isMoving=true;
     Vector2 *leftSpeed = [[Vector2 alloc] init];
-    leftSpeed.x=30;
+    leftSpeed.x=[Constants playerSpeed];
     [velocity set: leftSpeed];
 }
+
+-(void) flip {
+    if(isMoving||isFliping || toFlip)
+        return;
+    toFlip=true;
+    
+}
+
 - (void) updateWithGameTime:(GameTime *)gameTime {
   
 }

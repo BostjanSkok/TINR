@@ -104,7 +104,15 @@
     [self.game.components removeComponent:player];
 
 }
-
+- (void) initialize {
+    [super initialize];
+    
+   
+        if([player isKindOfClass:[HumanPlayer class]]){
+            [(HumanPlayer*)player setCamera:renderer.camera];
+        }
+}
+    
 
 - (void) playerScores {
 

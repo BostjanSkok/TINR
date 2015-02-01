@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		306DE7D41A7D5CF2003AA55C /* libArtificial.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E36508E14B4AE74003A2828 /* libArtificial.a */; };
+		307711341A7E2A2C005540CE /* IMoveToTarget.h in Headers */ = {isa = PBXBuildFile; fileRef = 307711331A7E2A2C005540CE /* IMoveToTarget.h */; };
 		AA747D9F0F9514B9006C5449 /* Express_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = AA747D9E0F9514B9006C5449 /* Express_Prefix.pch */; };
 		AACBBE4A0F95108600F1A2B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AACBBE490F95108600F1A2B1 /* Foundation.framework */; };
 		B506F26F129C0252002270AC /* ISceneUser.h in Headers */ = {isa = PBXBuildFile; fileRef = B506F26E129C0252002270AC /* ISceneUser.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -123,6 +124,7 @@
 
 /* Begin PBXFileReference section */
 		307545541A7DCCC20096AE6A /* IRectParticle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IRectParticle.h; sourceTree = "<group>"; };
+		307711331A7E2A2C005540CE /* IMoveToTarget.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IMoveToTarget.h; path = ../../../../../KuharBine/KuharBine/IMoveToTarget.h; sourceTree = "<group>"; };
 		4E36508414B4AE73003A2828 /* Artificial I.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Artificial I.xcodeproj"; path = "../Artificial I/Artificial I.xcodeproj"; sourceTree = "<group>"; };
 		AA747D9E0F9514B9006C5449 /* Express_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Express_Prefix.pch; sourceTree = SOURCE_ROOT; };
 		AACBBE490F95108600F1A2B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -353,6 +355,7 @@
 		B5D011FA1292D7F7008889BF /* Movement */ = {
 			isa = PBXGroup;
 			children = (
+				307711331A7E2A2C005540CE /* IMoveToTarget.h */,
 				B542797712770DF00015E810 /* IPosition.h */,
 				B5F418091277B0DB0012BAF1 /* IVelocity.h */,
 				B5F4180B1277B10B0012BAF1 /* IMovable.h */,
@@ -527,6 +530,7 @@
 				B506F590129C765E002270AC /* CollisionAlgorithm.h in Headers */,
 				B506F677129C83B0002270AC /* ICustomUpdate.h in Headers */,
 				B594877112AEF1AD00EE601F /* GridScene.h in Headers */,
+				307711341A7E2A2C005540CE /* IMoveToTarget.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

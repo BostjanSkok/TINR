@@ -10,6 +10,7 @@
 #import "IRectangleSize.h"
 
 #import "IMass.h"
+#import "IMoveToTarget.h"
 #import "ICoefficientOfRestitution.h"
 
 #import "IParticleCollider.h"

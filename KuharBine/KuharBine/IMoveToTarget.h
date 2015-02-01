@@ -12,4 +12,5 @@
 
 @property (nonatomic, retain) Vector2 *targetPosition;
 
+- (void) snapToTarget;
 @end

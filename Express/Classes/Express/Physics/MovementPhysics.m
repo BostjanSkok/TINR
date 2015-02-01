@@ -17,7 +17,11 @@
 	
 	if (movable) {
 		[movable.position add:[Vector2 multiply:movable.velocity by:elapsed]];
-	}	
+	}
+    id<IMoveToTarget> moveToTarget = [item conformsToProtocol:@protocol(IMoveToTarget)] ? item : nil;
+    if(moveToTarget && movable ){
+        [moveToTarget snapToTarget];
+    }
 }
 
 @end

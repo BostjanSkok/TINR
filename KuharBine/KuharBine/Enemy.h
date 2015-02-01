@@ -19,7 +19,7 @@
     bool isTop;
     float width;
     float height;
-    
+    BOOL isMoving;
     NSObject *under;
     NSObject *over;
     

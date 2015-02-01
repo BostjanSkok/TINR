@@ -11,13 +11,19 @@
 #import "Retronator.Xni.Framework.Input.Touch.classes.h"
 
 @interface HumanPlayer : Player{
+
     Rectangle *inputArea;
-    BOOL grabbing;
-    BOOL grabbed;
+  //  BOOL grabbing;
+  //  BOOL grabbed;
+    BOOL pressed;
+
     Vector2 *touchOffset;
  
     Matrix *inverseView;
 }
+
 - (void)didSwipe:(UISwipeGestureRecognizer*)swipe;
-    - (void) setCamera:(Matrix *)camera;
+- (void) setCamera:(Matrix *)camera;
+- (BOOL) rectContainsVector:(Rectangle*) rect value:(Vector2*) value ;
+
 @end

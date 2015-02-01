@@ -29,7 +29,17 @@
         
         UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self  action:@selector(didSwipe:)];
         swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
-        [theGame.window addGestureRecognizer:swipeRight];        /*	if (position == PlayerPositionBottom) {
+        [theGame.window addGestureRecognizer:swipeRight];
+     /*
+        UISwipeGestureRecognizer *swipeUp = [[UISwipeGestureRecognizer alloc] initWithTarget:self  action:@selector(didSwipe:)];
+        swipeRight.direction = UISwipeGestureRecognizerDirectionUp;
+        [theGame.window addGestureRecognizer:swipeUp];
+        
+        UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc] initWithTarget:self  action:@selector(didSwipe:)];
+        swipeRight.direction = UISwipeGestureRecognizerDirectionDown;
+        [theGame.window addGestureRecognizer:swipeDown];*/
+        
+        /*	if (position == PlayerPositionBottom) {
          inputArea.y = inputArea.height;
          }*/
        // touchOffset = [[Vector2 alloc] initWithX:0 y:position ==  -40];
@@ -50,67 +60,59 @@
         [mario GoLeft];
     } else if (swipe.direction == UISwipeGestureRecognizerDirectionRight) {
         NSLog(@"Swipe Right");
-       Mario *m = self;
         [mario GoRight];
-     
-    }/* else if (swipe.direction == UISwipeGestureRecognizerDirectionUp) {
-    NSLog(@"Swipe Up");
-    } else if (swipe.direction == UISwipeGestureRecognizerDirectionDown) {
-        NSLog(@"Swipe Down");
-    }*/
+    }
+  
 }
 
 - (void) updateWithGameTime:(GameTime *)gameTime {
     TouchCollection *touches = [TouchPanelHelper getState];
- /*   if (touchPanel.isGestureAvailable)
-    {
-        GestureSample *gesture = touchPanel.readGesture;
-        
-        if (gesture.gestureType == GestureTypeHorizontalDrag)
-        {
-            mario.velocity.x = 5;
-        }
-    }*/
-    BOOL touchesInInputArea = NO;
-    for (TouchLocation *touch in touches) {
-       // Vector2* touchInScene = [Vector2 transform:touch.position with:inverseView];
-        
-        //if ([inputArea containsVector:touchInScene]) {
-          //  touchesInInputArea = YES;
+
+        BOOL touchesInInputArea = NO;
+        for (TouchLocation *touch in touches) {
+            Vector2* touchInScene = [Vector2 transform:touch.position with:inverseView];
             
-          /*  if (!grabbed && touch.state == TouchLocationStatePressed || grabbing) {
-                grabbing = YES;
+            if ([self rectContainsVector:inputArea value:touchInScene]) {
+                touchesInInputArea = YES;
                 
-                float distanceToMallet = [[[Vector2 subtract:touchInScene by:mallet.position] add:touchOffset] length];
-                if (distanceToMallet < 50) {
-                    grabbed = YES;
+                if (!pressed && touch.state == TouchLocationStatePressed ) {
+                    pressed =true;
                 }
+                
+                if (pressed && touch.state == TouchLocationStateReleased ) {
+                    pressed =false;
+                     [mario flip];
+                    NSLog(@"flip   ");
+                }
+                
             }
             
-            if (grabbed) {
-                [[mallet.position set:touchInScene] add:touchOffset];
+            
+            if (!touchesInInputArea) {
+                pressed = false;
                 
-            }*/
-       //}
-    }
+            }
+        }
     
- /*   if (!touchesInInputArea) {
-        grabbed = NO;
-    }*/
+
 }
 
+- (BOOL) rectContainsVector:(Rectangle*) rect value:(Vector2*) value {
+    return (value.x >= rect.x && value.x <= rect.x + rect.width &&
+            value.y >= rect.y && value.y <= rect.y + rect.height);
+}
 - (void) reset {
-    grabbed = NO;
-    grabbing = NO;
+  //  grabbed = NO;
+   // grabbing = NO;
+    pressed= false;
+
 }
 
 - (void) dealloc
 {
+ 
     [inputArea release];
     [TouchPanel release];
     [super dealloc];
 }
-
-
-
 @end

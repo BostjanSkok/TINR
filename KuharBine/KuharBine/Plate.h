@@ -11,16 +11,20 @@
 #import "IStacked.h"
 #import "Namespace.KuharBine.classes.h"
 
-@interface Plate : NSObject <IRectParticle,ICustomCollider,IStacked>
+@interface Plate : NSObject <IRectParticle,IMoveToTarget,ICustomCollider,IStacked>
 {
     Vector2 *position;
     Vector2 *velocity;
     float width;
     float height;
     int rail;
+    bool isTop;
     NSObject *under;
     NSObject *over;
-  Vector2 *targetPosition;
+    //int railL;
+    //int railR;
+    BOOL isMoving;
+    Vector2 *targetPosition;
 }
 
 

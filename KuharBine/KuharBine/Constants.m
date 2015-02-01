@@ -30,12 +30,24 @@
 + (float) rail4X {
     return 219;
 }
+
++ (float) deltaX {
+    return 10;
+}
++ (float) deltaY {
+    return 1;
+}
+
 + (float) gravity {
     return 40;
 }
 
 + (float) spawnDelay {
     return 100;
+}
+
++ (float) playerSpeed {
+    return 150;
 }
 + (NSString*) MarioFilePath {
     return @"KuharBineMarioSave";
