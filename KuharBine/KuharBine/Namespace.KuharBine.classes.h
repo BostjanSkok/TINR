@@ -17,6 +17,7 @@
 
 @class Level;
 @class Mario;
+@class EnemyStacked;
 @class Enemy;
 @class Plate;
 @class Player;

@@ -2,7 +2,7 @@
 //  Enemy.h
 //  KuharBine
 //
-//  Created by SKOK, BOŠTJAN on 30/01/15.
+//  Created by TestM on 2/3/15.
 //  Copyright (c) 2015 fri. All rights reserved.
 //
 
@@ -11,20 +11,15 @@
 #import "Namespace.KuharBine.classes.h"
 #import "IEnemy.h"
 
-@interface Enemy : NSObject <IRectParticle , IEnemy,ICustomCollider>{
-    Vector2 *position;
-    Vector2 *velocity;
-    //If true colision detection active
-    int enemyType;
-    bool isTop;
-    float width;
-    float height;
-    BOOL isMoving;
-    NSObject *under;
-    NSObject *over;
-    
-    Vector2 *targetPosition;
+@interface Enemy : NSObject<IRectParticle,IEnemy>{
+Vector2 *position;
+Vector2 *velocity;
+//If true colision detection active
+int enemyType;
+    bool remove;
+float width;
+float height;
 }
 
-
+@property (nonatomic) bool remove;
 @end

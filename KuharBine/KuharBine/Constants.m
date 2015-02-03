@@ -32,7 +32,7 @@
 }
 
 + (float) deltaX {
-    return 10;
+    return 5;
 }
 + (float) deltaY {
     return 1;

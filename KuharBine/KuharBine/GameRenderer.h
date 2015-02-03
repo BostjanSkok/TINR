@@ -18,7 +18,7 @@
     Sprite *marioSprite;
 	Texture2D *background;
 	Vector2 *lightPosition;
-	
+    Sprite *plateDebug ;
 	// Graphics objects
 	SpriteBatch *spriteBatch;
 	

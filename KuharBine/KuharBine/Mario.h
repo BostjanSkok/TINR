@@ -13,9 +13,9 @@
 @interface Mario : NSObject<IMovable,IPosition,IMoveToTarget, ICustomUpdate,NSCoding> {
     Vector2 *position;
     Vector2 *velocity;
-    int currentRails;
+    int currentRail;
     int rails[3];
-    bool isFliping;
+    int platesMoving;
     bool toFlip;
 
     //int railL;
@@ -23,9 +23,9 @@
     BOOL isMoving;// We store previous position for velocity calculation.
     Vector2 *targetPosition;
 }
-@property (nonatomic) BOOL isMoving, isFliping,toFlip;
+@property (nonatomic) BOOL isMoving,toFlip;
 //zero no flip  -1 left 1 right flip
-@property (nonatomic) int currentRail;
+@property (nonatomic) int currentRail,platesMoving;
 + (Mario *) loadProgress;
 - (void) saveProgress;
 

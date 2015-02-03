@@ -1,5 +1,5 @@
 //
-//  Plate.h
+//  Enemy.h
 //  KuharBine
 //
 //  Created by SKOK, BOŠTJAN on 30/01/15.
@@ -8,28 +8,26 @@
 
 #import <Foundation/Foundation.h>
 #import "Express.Scene.Objects.h"
-#import "IStacked.h"
 #import "Namespace.KuharBine.classes.h"
+#import "IEnemy.h"
 
-@interface Plate : NSObject <IRectParticle,IMoveToTarget,ICustomCollider,IStacked>
-{
+@interface EnemyStacked : NSObject <IRectParticle ,IMoveToTarget ,IEnemy,IStacked,ICustomCollider>{
     Vector2 *position;
     Vector2 *velocity;
+    //If true colision detection active
+    int enemyType;
+    bool isTop;
     float width;
     float height;
-    int rail;
-    bool isTop;
+    BOOL isMoving;
     NSObject *under;
     NSObject *over;
-    //int railL;
-    //int railR;
-    BOOL isMoving;
-    BOOL flipFinished;
+    bool toRemoveWithPoints;
     Vector2 *targetPosition;
     int enemyTypeToAdd;
-    bool toRemoveWithPoints;
     int step;
+    
 }
 
-@property (nonatomic) BOOL flipFinished;
+
 @end

@@ -62,7 +62,11 @@
     marioSprite.texture = [self.game.content load:@"P1Animation32x64Tiles"];
     marioSprite.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:32];
     marioSprite.origin = [Vector2 vectorWithX:1 y:1];
-    /*malletShadow = [[Sprite alloc] init];
+  
+    plateDebug =[[Sprite alloc] init];
+    plateDebug.texture = [[Texture2D alloc] init];
+    plateDebug.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:5 height:5];
+    plateDebug.origin = [Vector2 vectorWithX:1 y:1];    /*malletShadow = [[Sprite alloc] init];
 	malletShadow.texture = [self.game.content load:@"SceneItems"];
 	malletShadow.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:1 height:1];
 	malletShadow.origin = [Vector2 vectorWithX:1 y:1];
@@ -97,14 +101,18 @@
 		
 		Sprite *sprite = nil;		
 		SpriteEffects effects = SpriteEffectsNone;
-		if ([item isKindOfClass:[Enemy class]]) {
-            Enemy *enemy = (Enemy*)item;
+		if ([item isKindOfClass:[EnemyStacked class]] || [item isKindOfClass:[Enemy class]]) {
+            EnemyStacked *enemy = (EnemyStacked*)item;
             sprite = (Sprite*)enemies[enemy.enemyType];
 			
 		} else if ([item isKindOfClass:[Mario class]]) {
 			sprite = marioSprite;
 			
 		}
+        else if ([item isKindOfClass:[Plate class]]) {
+            sprite = plateDebug;
+            
+        }
 		
       /*  if (itemWithPosition && shadowSprite) {
 			Vector2 *shadowPosition = [[[Vector2 subtract:lightPosition by:itemWithPosition.position] multiplyBy:-0.02] add:itemWithPosition.position];
@@ -117,6 +125,7 @@
 			[spriteBatch draw:sprite.texture to:itemWithPosition.position fromRectangle:sprite.sourceRectangle tintWithColor:[Color white]
 					 rotation:0 origin:sprite.origin scaleUniform:2 effects:effects layerDepth:0.1];
 		}
+      
 				
 	}
 	

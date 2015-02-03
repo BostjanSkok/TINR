@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol IMoveToTarget <NSObject>
+@protocol IMoveToTarget <NSObject,IMovable,IPosition>
 
 @property (nonatomic, retain) Vector2 *targetPosition;
+@property (nonatomic) bool isMoving;
 
 - (void) snapToTarget;
 @end

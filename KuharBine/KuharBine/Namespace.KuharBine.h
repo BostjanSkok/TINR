@@ -24,6 +24,7 @@
 #import "Player.h"
 #import "HumanPlayer.h"
 #import "Gameplay.h"
+#import "EnemyStacked.h"
 #import "Enemy.h"
 #import "IEnemy.h"
 #import "Constants.h"

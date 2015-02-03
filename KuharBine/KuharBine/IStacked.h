@@ -12,6 +12,10 @@
 
 @property (nonatomic, retain) NSObject *under;
 @property (nonatomic, retain) NSObject *over;
-
+@property (nonatomic) int enemyTypeToAdd;
+@property (nonatomic) bool toRemoveWithPoints;
+@property (nonatomic) bool isTop;
 @property (nonatomic) int rail;
+@property (nonatomic) int step;
+
 @end

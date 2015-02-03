@@ -18,9 +18,9 @@
         velocity = [[Vector2 alloc] init];
         targetPosition = [[Vector2 alloc] init];
         isMoving=false;
-        isFliping=false;
+        platesMoving=0;
         toFlip=false;
-        currentRails=0;
+        currentRail=0;
         rails[0] = [Constants rail1X];
         rails[1] = [Constants rail2X];
         rails[2] = [Constants rail3X];
@@ -29,7 +29,7 @@
     return self;
 }
 
-@synthesize position, velocity, isMoving,targetPosition,currentRail,isFliping,toFlip;
+@synthesize position, velocity,targetPosition,currentRail,platesMoving,toFlip;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];
@@ -38,8 +38,8 @@
 - (void) snapToTarget {
     if(!isMoving)
         return;
-    if( ABS(position.x - targetPosition.x) < [Constants deltaX] ){
-        if( ABS( position.y - targetPosition.y) < [Constants deltaY] ){
+    if( ABS(position.x - targetPosition.x) < [Constants deltaX]+100 ){
+        if( ABS( position.y - targetPosition.y) < [Constants deltaY]+100){
              [velocity set:[Vector2 zero]];
              [position set:targetPosition];
              [targetPosition set:[Vector2 zero]];
@@ -50,10 +50,10 @@
 }
 
 - (void) GoLeft {
-    if(currentRails==0 || isMoving || isFliping)
+    if(currentRail==0 || isMoving || platesMoving!=0)
         return;
-    currentRails--;
-    targetPosition.x= rails[currentRails];
+    currentRail--;
+    targetPosition.x= rails[currentRail];
     targetPosition.y = position.y;
     isMoving=true;
     Vector2 *leftSpeed = [[Vector2 alloc] init];
@@ -62,10 +62,10 @@
 }
 
 - (void) GoRight {
-    if(currentRails==2 || isMoving || isFliping)
+    if(currentRail==2 || isMoving || platesMoving!=0)
         return;
-    currentRails++;
-    targetPosition.x= rails[currentRails];
+    currentRail++;
+    targetPosition.x= rails[currentRail];
     targetPosition.y = position.y;
     isMoving=true;
     Vector2 *leftSpeed = [[Vector2 alloc] init];
@@ -74,7 +74,7 @@
 }
 
 -(void) flip {
-    if(isMoving||isFliping || toFlip)
+    if(isMoving||platesMoving!=0 || toFlip)
         return;
     toFlip=true;
     

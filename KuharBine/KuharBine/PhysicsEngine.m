@@ -39,7 +39,8 @@
      // [level.puck soundDef ];
      }*/
     for (id item1 in level.scene) {
-        if ([item1 isKindOfClass:[Enemy class]] || [item1 isKindOfClass:[Mario class]] )
+        if ([item1 isKindOfClass:[EnemyStacked class]] || [item1 isKindOfClass:[Mario class]] ||
+            [item1 isKindOfClass:[Plate class]]  ||  [item1 isKindOfClass:[Enemy class]])
         {
             [MovementPhysics simulateMovementOn:item1 withElapsed:gameTime.elapsedGameTime];
         }
@@ -49,7 +50,7 @@
     for (id item1 in level.scene) {
         if ([item1 isKindOfClass:[Enemy class]] ) {
             for (id item2 in level.scene) {
-                if ((item1!=item2) && ([item2 isKindOfClass:[Plate class]]|| [item2 isKindOfClass:[Enemy class]])) {
+                if ((item1!=item2) && ([item2 isKindOfClass:[Plate class]] || [item2 isKindOfClass:[EnemyStacked class]])) {
 					[Collision collisionBetween:item1 and:item2];
                 }
             }

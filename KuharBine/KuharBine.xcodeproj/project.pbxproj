@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3037EB3F1A7BB19400CDD19B /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB3E1A7BB19400CDD19B /* Constants.m */; };
-		3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB431A7BB1DD00CDD19B /* Enemy.m */; };
+		3037EB441A7BB1DD00CDD19B /* EnemyStacked.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB431A7BB1DD00CDD19B /* EnemyStacked.m */; };
 		3037EB4D1A7BB22400CDD19B /* Plate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3037EB4C1A7BB22400CDD19B /* Plate.m */; };
 		306DE7291A7B31CF003AA55C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7281A7B31CF003AA55C /* main.m */; };
 		306DE7431A7B31CF003AA55C /* KuharBineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 306DE7421A7B31CF003AA55C /* KuharBineTests.m */; };
@@ -46,6 +46,7 @@
 		307545531A7DC5130096AE6A /* PhysicsEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 307545521A7DC5130096AE6A /* PhysicsEngine.m */; };
 		307545591A7DE14A0096AE6A /* HumanPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 307545581A7DE14A0096AE6A /* HumanPlayer.m */; };
 		3075455C1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png in Resources */ = {isa = PBXBuildFile; fileRef = 3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */; };
+		92A38F901A813635004BB9B4 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92A38F8F1A813635004BB9B4 /* Enemy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,8 +100,8 @@
 		3037EB3C1A7BB16A00CDD19B /* Namespace.KuharBine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Namespace.KuharBine.h; sourceTree = "<group>"; };
 		3037EB3D1A7BB19400CDD19B /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		3037EB3E1A7BB19400CDD19B /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		3037EB421A7BB1DD00CDD19B /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
-		3037EB431A7BB1DD00CDD19B /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		3037EB421A7BB1DD00CDD19B /* EnemyStacked.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyStacked.h; sourceTree = "<group>"; };
+		3037EB431A7BB1DD00CDD19B /* EnemyStacked.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyStacked.m; sourceTree = "<group>"; };
 		3037EB4B1A7BB22400CDD19B /* Plate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Plate.h; sourceTree = "<group>"; };
 		3037EB4C1A7BB22400CDD19B /* Plate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Plate.m; sourceTree = "<group>"; };
 		3037EB511A7BB87400CDD19B /* KuharBine_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KuharBine_Prefix.pch; sourceTree = "<group>"; };
@@ -159,6 +160,8 @@
 		307545571A7DE14A0096AE6A /* HumanPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HumanPlayer.h; sourceTree = "<group>"; };
 		307545581A7DE14A0096AE6A /* HumanPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HumanPlayer.m; sourceTree = "<group>"; wrapsLines = 0; };
 		3075455B1A7DF1DF0096AE6A /* P1Animation32x64Tiles.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = P1Animation32x64Tiles.png; path = Assets/P1Animation32x64Tiles.png; sourceTree = SOURCE_ROOT; };
+		92A38F8E1A813635004BB9B4 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		92A38F8F1A813635004BB9B4 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,14 +213,16 @@
 		3037EB411A7BB1BD00CDD19B /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				3037EB421A7BB1DD00CDD19B /* Enemy.h */,
-				3037EB431A7BB1DD00CDD19B /* Enemy.m */,
+				3037EB421A7BB1DD00CDD19B /* EnemyStacked.h */,
+				3037EB431A7BB1DD00CDD19B /* EnemyStacked.m */,
 				3037EB4B1A7BB22400CDD19B /* Plate.h */,
 				3037EB4C1A7BB22400CDD19B /* Plate.m */,
 				306DE7E21A7D78AB003AA55C /* Mario.h */,
 				306DE7E31A7D78AB003AA55C /* Mario.m */,
 				3075454F1A7DAF880096AE6A /* IEnemy.h */,
 				307545561A7DD0FF0096AE6A /* IStacked.h */,
+				92A38F8E1A813635004BB9B4 /* Enemy.h */,
+				92A38F8F1A813635004BB9B4 /* Enemy.m */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A38F901A813635004BB9B4 /* Enemy.m in Sources */,
 				307545461A7DA1A70096AE6A /* Level.m in Sources */,
 				306DE7E41A7D78AB003AA55C /* Mario.m in Sources */,
 				306DE7A71A7D4D81003AA55C /* Menu.m in Sources */,
@@ -589,7 +595,7 @@
 				306DE7BC1A7D50C3003AA55C /* GameRenderer.m in Sources */,
 				306DE7E11A7D736D003AA55C /* Player.m in Sources */,
 				306DE79E1A7D3DBA003AA55C /* GameState.m in Sources */,
-				3037EB441A7BB1DD00CDD19B /* Enemy.m in Sources */,
+				3037EB441A7BB1DD00CDD19B /* EnemyStacked.m in Sources */,
 				306DE7291A7B31CF003AA55C /* main.m in Sources */,
 				306DE7651A7B3681003AA55C /* KuharBine.m in Sources */,
 				306DE7AB1A7D4E17003AA55C /* Button.m in Sources */,
