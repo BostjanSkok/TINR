@@ -15,7 +15,7 @@
 	
 	Label *title, *subtitle, *copyright;
 	
-	Button *singleplayer, *multiplayer, *options;
+	Button *singleplayer, *demo,*scores, *options;
 }
 
 @end

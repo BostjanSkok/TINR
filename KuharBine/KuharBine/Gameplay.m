@@ -35,14 +35,14 @@
     return self;
 }
 
-- (id) initDemoGame:(Game *)theGame  aiClass:(Class)aiClass
+- (id) initDemoGame:(Game *)theGame  //aiClass:(Class)aiClass
 {
     self = [super initWithGame:theGame];
     if (self != nil) {
         //[self startInitWithLevelClass:levelClass];
-        
-        // Create an ai and a human player.
-       // player[PlayerPositionTop] = [[aiClass alloc] initWithGame:self.game mallet:level.topMallet level:level position:PlayerPositionTop];
+           [self startInitWithLevelClass];
+        // Create an ai  player.
+        player = [[AIPlayer alloc] initWithGame:self.game mario:level.mario level:level];
         
         
         [self finishInit];
@@ -65,10 +65,10 @@
     renderer = [[GameRenderer alloc] initWithGame:self.game level:level];
     
     // Create a hud and a renderer for the hud.
-  //  hud = [[GameHud alloc] initWithGame:self.game];
-    
-   // hudRenderer = [[GuiRenderer alloc] initWithGame:self.game scene:hud.scene];
-   // hudRenderer.drawOrder = 1;
+    hud = [[GameHud alloc] initWithGame:self.game];
+   
+    hudRenderer = [[GuiRenderer alloc] initWithGame:self.game scene:hud.scene];
+    hudRenderer.drawOrder = 1;
     
     /*
      // Create a debug renderer for physics debugging.
@@ -87,8 +87,8 @@
 }
 - (void) activate {
     [self.game.components addComponent:level];
- //   [self.game.components addComponent:hud];
-   // [self.game.components addComponent:hudRenderer];
+    [self.game.components addComponent:hud];
+    [self.game.components addComponent:hudRenderer];
     [self.game.components addComponent:renderer];
     [self.game.components addComponent:physics];
     [self.game.components addComponent:player];
@@ -96,8 +96,8 @@
 }
 
 - (void) deactivate {
-  //  [self.game.components removeComponent:hud];
-    //[self.game.components removeComponent:hudRenderer];
+    [self.game.components removeComponent:hud];
+    [self.game.components removeComponent:hudRenderer];
     [self.game.components removeComponent:level];
     [self.game.components removeComponent:renderer];
     [self.game.components removeComponent:physics];
@@ -113,15 +113,67 @@
         }
 }
     
-
-- (void) playerScores {
-
-      //  [kuharBine popState];
-    
+- (void) updateWithGameTime:(GameTime *)gameTime {
+    // Game rules
+    if(hud.getBackStatus){
+        
+       /* for (id item in level.scene) {
+            if ([item isKindOfClass:[Mallet class]]) {
+                [item saveProgress];
+            }
+        }*/
+        
+        [kuharBine popState];
+    }
+   
+        
+        // [addedEnemies removeObject:item];
+    [self playerScores:level.mario.score];
+ /*  if (level.puck.position.y < -50) {
+        [self playerScores:PlayerPositionBottom];
+    } else if (level.puck.position.y > 510) {
+        [self playerScores:PlayerPositionTop];
+    }*/
 }
-- (void) dealloc
+
+- (void) playerScores:(int)score {
+  /*  if (position == PlayerPositionTop) {
+        [SoundEngine play:SoundEffectTypeLose];
+        [level resetToBottom];
+    } else {
+        [SoundEngine play:SoundEffectTypeWin];
+        [level resetToTop];
+    }
+    */
+ //   [player[PlayerPositionTop] reset];
+  //  [player[PlayerPositionBottom] reset];
+    
+   
+    [hud changePlayerScoreFor:score];
+   /*
+    if (score[position] >= [Constants winScore]) {
+        AIPlayer *opponent = [player[PlayerPositionTop] isKindOfClass:[AIPlayer class]] ? (AIPlayer*)player[PlayerPositionTop] : nil;
+        
+        
+        if (position == PlayerPositionBottom && opponent) {
+            // Unlock current level.
+            LevelType levelType = [[opponent class] levelType];
+            [friHockey.progress unlockLevel:levelType];
+            
+            // Unlock next opponent.
+            OpponentType opponentType = [[opponent class] opponentType] + 1;
+            if (opponentType < OpponentTypes) {
+                [friHockey.progress unlockOpponent:opponentType];
+            }
+        }
+        
+        [friHockey popState];
+    }*/
+}
+
+    - (void) dealloc
 {
- //   [hud release];
+    [hud release];
     [hudRenderer release];
     [level release];
     [renderer release];

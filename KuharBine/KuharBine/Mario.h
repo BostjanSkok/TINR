@@ -16,8 +16,9 @@
     int currentRail;
     int rails[3];
     int platesMoving;
+    int *topScores[10];
     bool toFlip;
-
+ int score;
     //int railL;
     //int railR;
     BOOL isMoving;// We store previous position for velocity calculation.
@@ -28,7 +29,7 @@
 @property (nonatomic) int currentRail,platesMoving;
 + (Mario *) loadProgress;
 - (void) saveProgress;
-
+@property (nonatomic) int score;
 - (void) resetVelocity;
 - (void) GoLeft;
 - (void) GoRight;

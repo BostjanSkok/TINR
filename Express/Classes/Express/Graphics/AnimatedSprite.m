@@ -51,7 +51,9 @@ static NSArray *frameStartSort;
 	
 	if (time >= duration) {
 		// Animation has finished.
-		return nil;
+        AnimatedSpriteFrame *frame = (AnimatedSpriteFrame*)[frames objectAtIndex:[frames count] - 1];
+        return frame.sprite;
+        //return nil;
 	} 
 	
 	for (int i = 0; i < [frames count] - 1; i++) {

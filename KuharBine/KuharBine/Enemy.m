@@ -19,12 +19,13 @@
         width = 10;
         height =30;
         enemyType = arc4random_uniform(4);
+        rail=-1;
         
         
     }
     return self;
 }
-@synthesize position, velocity,width,height,enemyType,remove;
+@synthesize position, velocity,width,height,enemyType,remove,rail;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];

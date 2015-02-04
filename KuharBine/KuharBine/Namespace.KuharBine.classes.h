@@ -11,6 +11,8 @@
 @class GameState;
 @class Gameplay;
 @class Button;
+@class GameHud;
+
 
 @class Menu, MainMenu;//, OpponentSelection, LevelSelection, Options;
 @class GameRenderer, GuiRenderer;
@@ -22,5 +24,6 @@
 @class Plate;
 @class Player;
 @class HumanPlayer;
+@class AIPlayer;
 
 @class PhysicsEngine;

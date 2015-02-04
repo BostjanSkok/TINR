@@ -48,15 +48,20 @@
      */
 	
 	// Buttons
-	singleplayer = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:300 width:120 height:64]
+	singleplayer = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:250 width:120 height:64]
                                           background:nil font:retrotype text:@"Start"];
 //	[singleplayer.backgroundImage setScaleUniform:2];
 	[scene addItem:singleplayer];
 	
-	multiplayer = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:350 width:120 height:64]
-										 background:nil font:retrotype text:@"Scores"];
+	demo = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:300 width:120 height:64]
+										 background:nil font:retrotype text:@"Demo"];
 	//[multiplayer.backgroundImage setScaleUniform:2];
-	[scene addItem:multiplayer];
+	[scene addItem:demo];
+    
+    scores = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:350 width:120 height:64]
+                                         background:nil font:retrotype text:@"Scores"];
+    //[multiplayer.backgroundImage setScaleUniform:2];
+    [scene addItem:scores];
 	
 	options = [[Button alloc] initWithInputArea:[Rectangle rectangleWithX:130 y:400 width:120 height:64]
 									 background:buttonBackground font:retrotype text:@"Options"];
@@ -74,10 +79,14 @@
            // Class levelClass = [kuharBine getLevelClass];
         Gameplay *gameplay = [[[Gameplay alloc] initSinglePlayerWithGame:self.game ] autorelease];
         [kuharBine pushState:gameplay];
-	} else if (multiplayer.wasReleased) {	
-		//newState = [[[LevelSelection alloc] initWithGame:self.game] autorelease];
-        exit(0);
-	} else if (options.wasReleased) {
+	} else if (demo.wasReleased) {
+        Gameplay *gameplay = [[[Gameplay alloc] initDemoGame:self.game  ] autorelease];
+        [kuharBine pushState:gameplay];
+        //newState = [[[LevelSelection alloc] initWithGame:self.game] autorelease];
+       // exit(0);
+    }else if (scores.wasReleased) {
+        //newState = [[[Options alloc] initWithGame:self.game] autorelease];
+    }else if (options.wasReleased) {
 		//newState = [[[Options alloc] initWithGame:self.game] autorelease];
 	}
 	
@@ -96,7 +105,8 @@
 	[copyright release];
 	
 	[singleplayer release];
-	[multiplayer release];
+	[demo release];
+    [scores release];
 	[options release];
 	
 	[super dealloc];

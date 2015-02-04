@@ -39,7 +39,7 @@
 }
 
 + (float) gravity {
-    return 40;
+    return 30;
 }
 
 + (float) spawnDelay {

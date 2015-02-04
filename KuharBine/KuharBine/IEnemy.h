@@ -11,5 +11,5 @@
 @protocol IEnemy <NSObject>
 
 @property (nonatomic) int enemyType;
-
+@property (nonatomic) int rail;
 @end

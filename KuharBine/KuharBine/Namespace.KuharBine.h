@@ -13,6 +13,7 @@
 #import "MainMenu.h"
 #import "Button.h"
 #import "GuiRenderer.h"
+#import "GameHud.h"
 
 
 #import "GameRenderer.h"
@@ -23,6 +24,7 @@
 #import "Mario.h"
 #import "Player.h"
 #import "HumanPlayer.h"
+#import "AiPlayer.h"
 #import "Gameplay.h"
 #import "EnemyStacked.h"
 #import "Enemy.h"

@@ -104,10 +104,12 @@
 	// Update all items with custom update.
     if(counter>[Constants spawnDelay]){
         Enemy *enemyToAdd = [[Enemy alloc] init];
-        enemyToAdd.position.x = rails[arc4random_uniform(4)];
+        int rail =arc4random_uniform(4);
+        enemyToAdd.position.x = rails[rail];
         enemyToAdd.position.y = [Constants topY];
         enemyToAdd.velocity.x=0;
         enemyToAdd.velocity.y=[Constants gravity];
+        enemyToAdd.rail=rail;
         [addedEnemies addObject:enemyToAdd];
         [scene addItem:enemyToAdd];
         counter=0;
@@ -120,21 +122,28 @@
 			[updatable updateWithGameTime:gameTime];
 		}
         if ([item isKindOfClass:[Enemy class]] && ((Enemy*)item).remove) {
-                  [scene removeItem:item];
-                [addedEnemies removeObject:item];
+            [scene removeItem:item];
+            [addedEnemies removeObject:item];
         }
         if ([item isKindOfClass:[EnemyStacked class]] && ((EnemyStacked*)item).toRemoveWithPoints) {
             //TODO add points
+            id<IStacked> stackItem = [item conformsToProtocol:@protocol(IStacked) ] ? item: nil;
+            id<IStacked> underItem = [stackItem.under conformsToProtocol:@protocol(IStacked) ] ? stackItem.under: nil;
+            underItem.isTop = true;
+            underItem.over = nil;
             [scene removeItem:item];
+            mario.score++;
            // [addedEnemies removeObject:item];
         }
         if ([item isKindOfClass:[Plate class]] || [item isKindOfClass:[EnemyStacked class]] ) {
-            id<IStacked> stackItem = [item conformsToProtocol:@protocol(IStacked) ] ? item: nil;
+            id<IStacked> stackItem = [item conformsToProtocol:@protocol(IStacked)] ? item : nil;
+            /* id<IStacked,IMoveToTarget> stackItem = [item conformsToProtocol:@protocol(IMoveToTarget) ] && [ item conformsToProtocol:@protocol(IStacked)] ? item : nil;*/
             if(stackItem.enemyTypeToAdd>=0){
            
                 EnemyStacked *enemyToAdd = [[EnemyStacked alloc] init];
                 enemyToAdd.position.x = rails[stackItem.rail];
-                enemyToAdd.position.y = [Constants topY] -(10*stackItem.step);
+                enemyToAdd.position.y = [Constants bottomY] - (32*stackItem.step);
+                enemyToAdd.enemyType= stackItem.enemyTypeToAdd;
                 enemyToAdd.velocity.x=0;
                 enemyToAdd.velocity.y=0;
                 enemyToAdd.rail=stackItem.rail;
@@ -143,7 +152,7 @@
                 enemyToAdd.isTop =true;
                 stackItem.over =enemyToAdd;
                 [scene addItem:enemyToAdd];
-               
+                stackItem.enemyTypeToAdd =-1;
             }
         }
         //Fliping related stuff
@@ -189,6 +198,7 @@
                     moveToTarget.targetPosition.x= rails[currentPlayerPos+1];
                     moveToTarget.targetPosition.y= moveToTarget.position.y;
                     moveToTarget.isMoving= true;
+                    moveToTarget.rail= second.rail;
                 }
                 
              
@@ -204,6 +214,7 @@
                     moveToTarget2.targetPosition.x= rails[currentPlayerPos];
                     moveToTarget2.targetPosition.y= moveToTarget2.position.y;
                     moveToTarget2.isMoving= true;
+                    moveToTarget2.rail= first.rail;
                 }
                 
                 

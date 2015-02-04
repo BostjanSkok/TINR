@@ -21,7 +21,8 @@
     Sprite *plateDebug ;
 	// Graphics objects
 	SpriteBatch *spriteBatch;
-	
+    Texture2D *enemieAT[4],*marioASpriteT;
+    AnimatedSprite *enemieSpriteAnimation[4] ,*marioASprite;
 	// Level
 	Level *level;
     

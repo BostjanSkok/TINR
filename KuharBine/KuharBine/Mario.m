@@ -21,6 +21,7 @@
         platesMoving=0;
         toFlip=false;
         currentRail=0;
+        score=0;
         rails[0] = [Constants rail1X];
         rails[1] = [Constants rail2X];
         rails[2] = [Constants rail3X];
@@ -29,7 +30,7 @@
     return self;
 }
 
-@synthesize position, velocity,targetPosition,currentRail,platesMoving,toFlip;
+@synthesize position, velocity,targetPosition,currentRail,platesMoving,toFlip,score,isMoving;
 
 - (void) resetVelocity {
     [velocity set:[Vector2 zero]];
@@ -85,14 +86,15 @@
 }
 
 
-- (id) initWithCoder:(NSCoder *)aDecoder {
+ -(id) initWithCoder:(NSCoder *)aDecoder {
     self = [super init];
     if (self != nil){
-        position = [[Vector2 alloc] init];
-        velocity = [[Vector2 alloc] init];
+         [aDecoder decodeArrayOfObjCType:@encode(int) count:10 at:topScores];
+        //position = [[Vector2 alloc] init];
+        /*velocity = [[Vector2 alloc] init];
      
         self.position.x = [aDecoder decodeFloatForKey:[NSString stringWithFormat:@"MarioX"]];
-        self.position.y = [aDecoder decodeFloatForKey:[NSString stringWithFormat:@"MarioY"]];
+        self.position.y = [aDecoder decodeFloatForKey:[NSString stringWithFormat:@"MarioY"]];*/
     }
     
     return self;
@@ -100,9 +102,8 @@
 
 - (void) encodeWithCoder:(NSCoder *)aCoder {
     
-    [aCoder encodeFloat:position.x forKey:[NSString stringWithFormat:@"MarioX"]];
-    [aCoder encodeFloat:position.y forKey:[NSString stringWithFormat:@"MarioY"]];
-}
+    [aCoder encodeArrayOfObjCType:@encode(int) count:10 at:topScores];
+  }
 
 + (Mario *) loadProgress {
     // Load game progress from file.

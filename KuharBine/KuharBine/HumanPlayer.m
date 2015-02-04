@@ -21,7 +21,7 @@
     if (self != nil) {
        TouchPanel *touchPanel = [TouchPanel getInstance];
         //touchPanel.enabledGestures= GestureTypeHorizontalDrag;
-        inputArea = [[Rectangle alloc] initWithX:0 y:0 width:touchPanel.displayWidth height:touchPanel.displayHeight];
+        inputArea = [[Rectangle alloc] initWithX:0 y:0 width:touchPanel.displayWidth height:touchPanel.displayHeight-100];
     
         UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(didSwipe:)];
         swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;

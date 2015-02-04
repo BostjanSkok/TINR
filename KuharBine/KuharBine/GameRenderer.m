@@ -56,12 +56,44 @@
     enemies[3].origin = [Vector2 vectorWithX:1 y:1];
     
    // AnimatedSprite *marioSprite = [[AnimatedSprite alloc] init];
-    //[marioSprite addFrame:<#(AnimatedSpriteFrame *)#>]
+    //[marioSprite addFrame://<#(AnimatedSpriteFrame *)#>]*/
+    // create animated explosion sprite
+    enemieAT[0] = [[self.game.content load:@"Obj1Animation32x32Tiles"] autorelease];
+    enemieAT[1] = [[self.game.content load:@"Obj2Animated32x32Tiles"] autorelease];
+    enemieAT[2] = [[self.game.content load:@"Obj3Animation32x32Tiles"] autorelease];
+    enemieAT[3] = [[self.game.content load:@"Obj4Animation32x32Tiles"] autorelease];
+    for (int k=1; k<5; k++)
+    {
     
-    marioSprite= [[Sprite alloc] init];
+    enemieSpriteAnimation[k-1] = [[AnimatedSprite alloc] initWithDuration:1];
+    enemieSpriteAnimation[k-1].looping = YES;
+    for (int i = 0; i < 2; i++) {
+        Sprite *sprite = [[[Sprite alloc] init] autorelease];
+        sprite.texture = enemieAT[k-1];
+        sprite.sourceRectangle = [Rectangle rectangleWithX:i*32 y:0 width:32 height:32];
+        sprite.origin = [Vector2 vectorWithX:1 y:1];
+        
+        AnimatedSpriteFrame *frame = [AnimatedSpriteFrame frameWithSprite:sprite start:enemieSpriteAnimation[k-1].duration * (float)i / 2];
+        [enemieSpriteAnimation[k-1] addFrame:frame];
+    }
+    }
+    marioASpriteT = [[self.game.content load:@"P1Animation32x64Tiles"] autorelease];
+    marioASprite = [[AnimatedSprite alloc] initWithDuration:1];
+    marioASprite.looping = NO;
+    for (int i = 0; i < 5; i++) {
+
+        Sprite *sprite = [[[Sprite alloc] init] autorelease];
+        sprite.texture = marioASpriteT;
+        sprite.sourceRectangle = [Rectangle rectangleWithX:0 y:i * 32 width:64 height:32];
+        sprite.origin = [Vector2 vectorWithX:1 y:1];
+        
+        AnimatedSpriteFrame *frame = [AnimatedSpriteFrame frameWithSprite:sprite start:marioASprite.duration * (float)i / 4];
+        [marioASprite addFrame:frame];
+    }
+   /* marioSprite= [[Sprite alloc] init];
     marioSprite.texture = [self.game.content load:@"P1Animation32x64Tiles"];
     marioSprite.sourceRectangle = [Rectangle rectangleWithX:0 y:0 width:64 height:32];
-    marioSprite.origin = [Vector2 vectorWithX:1 y:1];
+    marioSprite.origin = [Vector2 vectorWithX:64 y:32];*/
   
     plateDebug =[[Sprite alloc] init];
     plateDebug.texture = [[Texture2D alloc] init];
@@ -99,20 +131,26 @@
 		id<IPosition> itemWithPosition = [item conformsToProtocol:@protocol(IPosition)] ? item : nil;
 		
 		
-		Sprite *sprite = nil;		
+		Sprite *sprite = nil;
 		SpriteEffects effects = SpriteEffectsNone;
-		if ([item isKindOfClass:[EnemyStacked class]] || [item isKindOfClass:[Enemy class]]) {
+        if([item isKindOfClass:[Enemy class]]){
+            // get the appropriate sprite from animation
+            Enemy *enemy = (Enemy*)item;
+            sprite = [enemieSpriteAnimation[enemy.enemyType] spriteAtTime:gameTime.totalGameTime];
+
+        }
+		else if ([item isKindOfClass:[EnemyStacked class]]  ) {
             EnemyStacked *enemy = (EnemyStacked*)item;
             sprite = (Sprite*)enemies[enemy.enemyType];
 			
 		} else if ([item isKindOfClass:[Mario class]]) {
-			sprite = marioSprite;
+            sprite = [marioASprite spriteAtTime:gameTime.totalGameTime];
 			
 		}
-        else if ([item isKindOfClass:[Plate class]]) {
+      /*  else if ([item isKindOfClass:[Plate class]]) {
             sprite = plateDebug;
             
-        }
+        }*/
 		
       /*  if (itemWithPosition && shadowSprite) {
 			Vector2 *shadowPosition = [[[Vector2 subtract:lightPosition by:itemWithPosition.position] multiplyBy:-0.02] add:itemWithPosition.position];

@@ -13,10 +13,9 @@
 
 @interface Gameplay : GameState {
     Level *level;
-   // GameHud *hud;
+    GameHud *hud;
     
    Player *player;
-    int score[2];
     
     GameRenderer *renderer;
     GuiRenderer *hudRenderer;

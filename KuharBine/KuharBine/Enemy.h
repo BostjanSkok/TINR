@@ -11,12 +11,13 @@
 #import "Namespace.KuharBine.classes.h"
 #import "IEnemy.h"
 
-@interface Enemy : NSObject<IRectParticle,IEnemy>{
+@interface Enemy : NSObject<IRectParticle,IEnemy,ICustomCollider>{
 Vector2 *position;
 Vector2 *velocity;
 //If true colision detection active
 int enemyType;
     bool remove;
+    int rail;
 float width;
 float height;
 }
